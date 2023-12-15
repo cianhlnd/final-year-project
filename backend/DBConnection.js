@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 //Connect to database
-mongoose.connect('mongodb+srv://Cian:Fr8nx8iCsZxYZyTn@footballcoachinghub.dh8i5rt.mongodb.net/test',
+mongoose.connect('mongodb+srv://Cian:Project@footballcoachinghub.dh8i5rt.mongodb.net/test',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
