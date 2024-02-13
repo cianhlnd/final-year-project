@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    height: 100vh;
+  }
+  .register {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    background-color: blue;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    transform: translateX(-50%);
+    top: 40%;
+    left: 50%;
+  }
+  .login {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    background-color: blue;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    transform: translateX(-50%);
+    top: 60%;
+    left: 50%;
+  }
+
+  .register .link-style,
+.login .link-style {
+  color: white;
+  text-decoration: none;
+}
+
+  
+  .register:hover, .login:hover {
+    background-color: lightblue;
+  }
