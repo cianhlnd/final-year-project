@@ -12,7 +12,9 @@ app.use(cors({
     credentials: true
 }));
 var apiRoutes = require("./routes/apiRoutes");
+var authApiRoutes = require("./routes/authApiRoutes");
 app.use("/api/v1/public",apiRoutes);
-app.listen(port, () => {
+app.use("/api/v1/user",authApiRoutes);
+app.listen(port, () => { 
     console.log(`App is listening on port ${port}`);
 });
