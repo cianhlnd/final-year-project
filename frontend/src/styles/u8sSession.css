@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: 100vh;
+}
+
+.image-download-container {
+  margin-top: 150px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-download {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; 
+}
+
+.download-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: turquoise;
+  color: white;
+}
+
+.download-button:hover {
+  background-color: lightblue;
+}
