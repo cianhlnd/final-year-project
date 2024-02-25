@@ -38,13 +38,13 @@ function RegistrationForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-      <div className = "input-container">
-          <label className = "input-label">Username:</label>
-          <input type="text" name="username" onChange={handleChange} value={formData.username} required />
-          <label className = "input-label">Email:</label>
-          <input type="email" name="email" onChange={handleChange} value={formData.email} required />
-          <label className = "input-label">Password:</label>
-          <input type="password" name="password" onChange={handleChange} value={formData.password} required />
+      <div className = "register-input-container">
+          <label className = "register-input-label">Username:</label>
+          <input type="text" name="username" className = "register-input" onChange={handleChange} value={formData.username} required />
+          <label className = "register-input-label">Email:</label>
+          <input type="email" name="email" className = "register-input" onChange={handleChange} value={formData.email} required />
+          <label className = "register-input-label">Password:</label>
+          <input type="password" name="password" className = "register-input" onChange={handleChange} value={formData.password} required />
           <button type="submit" className="register-button">
         Register
       </button>
