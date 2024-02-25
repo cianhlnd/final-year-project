@@ -34,8 +34,12 @@ function Profile () {
       <Link to="/courses">
         <button>Go to Courses Database</button>
       </Link>
+      <Link to="/u8sSession">
+        <button>Go to u8sSession</button>
+      </Link>
     </div>
   );
 };
 
 export default Profile;
+
