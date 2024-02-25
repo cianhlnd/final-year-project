@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Registration.css';
 import '../styles/Login.css';
 
 function LoginForm() {
@@ -37,12 +36,13 @@ function LoginForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label className="input-label">Email:</label>
-          <input type="email" name="email" onChange={handleChange} value={formData.email} required />
+        <div className="login-input-container">
+          <header className = "h1">Login</header>
+          <label className="login-input-label">Email:</label>
+          <input type="email" name = "email" className = "login-input" onChange={handleChange} value={formData.email} required />
           <label className="input-label">Password:</label>
-          <input type="password" name="password" onChange={handleChange} value={formData.password} required />
-          <button type="submit" className="register-button">
+          <input type="password" name="password" className = "login-input" onChange={handleChange} value={formData.password} required />
+          <button type="submit" className="login-button">
             Login
           </button>
         </div>
