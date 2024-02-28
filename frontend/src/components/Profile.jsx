@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 function Profile () {
   const [userData, setUserData] = useState(null);
@@ -31,12 +30,6 @@ function Profile () {
           <p>Email: {userData.email}</p>
         </div>
       )}
-      <Link to="/courses">
-        <button>Go to Courses Database</button>
-      </Link>
-      <Link to="/u8sSession">
-        <button>Go to u8sSession</button>
-      </Link>
     </div>
   );
 };
