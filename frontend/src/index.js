@@ -9,9 +9,11 @@ import LoginForm from './components/LoginForm';
 import Profile from './components/Profile';
 import Courses from './components/coursedatabase/Courses';
 import U8sSession from './components/sessionplans/u8sSession';
+import FiveASide from './components/formations/5-a-side';
 import About from './components/About';
 
-function Navbar  () {
+
+function Navbar() {
   return (
     <nav>
       <ul>
@@ -22,10 +24,39 @@ function Navbar  () {
           <Link to="/courses">Courses</Link>
         </li>
         <li>
-          Sessions
+          Coaches Corner
           <ul>
             <li>
-              <Link to="/sessions/u8sSession">U8s Session</Link>
+              <div>Formations</div>
+              <ul className="formations-submenu">
+                <li>
+                  <Link to="coaches-corner/formations/5-a-side">5-a-side</Link>
+                  <Link to="coaches-corner/formations/7-a-side">7-a-side</Link>
+                  <Link to="coaches-corner/formations/9-a-side">9-a-side</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div>Session Plans</div>
+              <ul className="session-plans-submenu">
+                <li>
+                  <div>u8s-u9s</div>
+                  <ul className="session-plans-sub-submenu">
+                    <li>
+                      <Link to="/coaches-corner/session-plans/u8sSession">Dribbling Session</Link>
+                    </li>
+                    <li>
+                      <Link to="/coaches-corner/session-plans/u8sSession">Shooting Session</Link>
+                    </li>
+                    <li>
+                      <Link to="/coaches-corner/session-plans/u8sSession">Passing Session</Link>
+                    </li>
+                    <li>
+                      <Link to="/coaches-corner/session-plans/u8sSession">Defending Session</Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -35,9 +66,10 @@ function Navbar  () {
       </ul>
     </nav>
   );
-};
+}
 
-const App = () => {
+
+function App () {
   return (
     <BrowserRouter>
       <div>
@@ -49,7 +81,8 @@ const App = () => {
           <Route path="login" element={<LoginForm />} />
           <Route path="profile" element={<Profile />} />
           <Route path="courses" element={<Courses />} />
-          <Route path="sessions/u8sSession" element={<U8sSession />} />
+          <Route path="coaches-corner/formations/5-a-side" element={<FiveASide />} />
+          <Route path="coaches-corner/session-plans/u8sSession" element={<U8sSession />} />
           <Route path="about" element={<About />} />
         </Routes>
       </div>
