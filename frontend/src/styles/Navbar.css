@@ -7,18 +7,21 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
 nav li {
-  margin-left: 40px;
   position: relative;
   color: white;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 nav li a {
-  text-decoration: none; /* Remove underline for anchor elements */
-  color: inherit; /* Inherit the color from the parent li */
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  display: block;
 }
 
 nav li ul {
@@ -29,6 +32,54 @@ nav li ul {
   background-color: black;
 }
 
-nav li:hover ul {
+nav .session-plans-submenu,
+nav .session-plans-sub-submenu,
+nav .formations-submenu,
+nav .u8s-u9s-submenu {
+  left: 100%;
+  top: 0;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+nav .session-plans-sub-submenu,
+nav .u8s-u9s-submenu ul {
+  white-space: normal; /* Allow line breaks for sub-submenu items */
+}
+
+nav .session-plans-submenu > ul {
+  display: flex; /* Use flexbox to keep submenus on the same line */
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav li div {
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+nav li:hover > div,
+nav li div:hover {
+  color: yellow; /* Change the color as needed */
+}
+
+nav li div,
+nav li:hover {
+  cursor: pointer;
+}
+
+nav li div:hover + ul {
+  display: block;
+}
+
+nav li ul li {
+  margin-left: 0;
+}
+
+nav li ul li a {
+  color: white;
+  padding: 10px;
   display: block;
 }
