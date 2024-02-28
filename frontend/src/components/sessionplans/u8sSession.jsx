@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/u8sSession.css';
 
-const ImageDownload = ({ imageUrl, imageName, imageSize }) => {
+function ImageDownload ({ imageUrl, imageName, imageSize }) {
   const handleDownload = () => {
     // Create an anchor element
     const link = document.createElement('a');
@@ -42,18 +42,24 @@ ImageDownload.propTypes = {
   imageSize: PropTypes.string.isRequired,
 };
 
-const U8sSession = () => {
+function U8sSession  () {
   return (
     <div>
+      <header className = "u8s-header">Session plan 1</header>
       <ImageDownload
-        imageUrl={process.env.PUBLIC_URL + '/images/warm-up.png'}
+        imageUrl={process.env.PUBLIC_URL + '/images/u8s-u9s/session-plan-1/warm-up.png'}
         imageName="warm-up.png"
         imageSize="600px"
       />
       <ImageDownload
-        imageUrl={process.env.PUBLIC_URL + '/images/another-image.png'}
-        imageName="another-image.png"
-        imageSize="250px"
+        imageUrl={process.env.PUBLIC_URL + '/images/u8s-u9s/session-plan-1/dribbling-drill.png'}
+        imageName="dribbling-drill.png"
+        imageSize="600px"
+      />
+      <ImageDownload
+        imageUrl={process.env.PUBLIC_URL + '/images/u8s-u9s/session-plan-1/shooting-drill.png'}
+        imageName="shooting-drill.png"
+        imageSize="600px"
       />
     </div>
   );
