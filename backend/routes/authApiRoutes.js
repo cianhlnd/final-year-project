@@ -30,11 +30,11 @@ router.use(async function(req, res, next) {
         return;
     }
 });
-router.route("/authenticate")
+/*router.route("/authenticate")
     .get(function(req,res){
         //console.log(req.user);
         res.status(200).json({username:req.user.username, data: req.user.data});
-    })
+    })*/
 router.route("/logout")
     .get(function(req,res){
         res.clearCookie('appjwt');
