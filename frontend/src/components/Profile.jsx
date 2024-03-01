@@ -26,7 +26,7 @@ function Profile() {
   };
 
   return (
-    <Link to="/home" style={{ color: 'white', textDecoration: 'none' }}>
+    <Link to="/homepage" style={{ color: 'white', textDecoration: 'none' }}>
       <button onClick={handleLogout}>
         Logout
       </button>

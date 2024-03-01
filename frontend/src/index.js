@@ -1,3 +1,4 @@
+// Import necessary components and modules
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -25,6 +26,7 @@ import SevenASide from './components/formations/7-a-side';
 import NineASide from './components/formations/9-a-side';
 import About from './components/About';
 
+// Navbar component
 function Navbar() {
   return (
     <nav>
@@ -42,9 +44,9 @@ function Navbar() {
               <div>Formations</div>
               <ul className="formations-submenu">
                 <li>
-                  <Link to="coaches-corner/formations/5-a-side">5-a-side</Link>
-                  <Link to="coaches-corner/formations/7-a-side">7-a-side</Link>
-                  <Link to="coaches-corner/formations/9-a-side">9-a-side</Link>
+                  <Link to="/coaches-corner/formations/5-a-side">5-a-side</Link>
+                  <Link to="/coaches-corner/formations/7-a-side">7-a-side</Link>
+                  <Link to="/coaches-corner/formations/9-a-side">9-a-side</Link>
                 </li>
               </ul>
             </li>
@@ -114,40 +116,74 @@ function Navbar() {
   );
 }
 
-function App () {
+// App component
+function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="home" element={<HomePage />} />
-          <Route path="registration" element={<RegistrationForm />} />
-          <Route path="login" element={<LoginForm />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="courses" element={<Courses />} />
-          <Route path="coaches-corner/formations/5-a-side" element={<FiveASide />} />
-          <Route path="coaches-corner/formations/7-a-side" element={<SevenASide />} />
-          <Route path="coaches-corner/formations/9-a-side" element={<NineASide />} />
-          <Route path="coaches-corner/session-plans/u8s/dribbling" element={<U8sDribblingSession />} />
-          <Route path="coaches-corner/session-plans/u8s/defending" element={<U8sDefendingSession />} />
-          <Route path="coaches-corner/session-plans/u8s/shooting" element={<U8sShootingSession />} />
-          <Route path="coaches-corner/session-plans/u8s/passing" element={<U8sPassingSession />} />
-          <Route path="coaches-corner/session-plans/u10s/dribbling" element={<U10sDribblingSession />} />
-          <Route path="coaches-corner/session-plans/u10s/defending" element={<U10sDefendingSession />} />
-          <Route path="coaches-corner/session-plans/u10s/shooting" element={<U10sShootingSession />} />
-          <Route path="coaches-corner/session-plans/u10s/passing" element={<U10sPassingSession />} />
-          <Route path="coaches-corner/session-plans/u12s/dribbling" element={<U12sDribblingSession />} />
-          <Route path="coaches-corner/session-plans/u12s/defending" element={<U12sDefendingSession />} />
-          <Route path="coaches-corner/session-plans/u12s/shooting" element={<U12sShootingSession />} />
-          <Route path="coaches-corner/session-plans/u12s/passing" element={<U12sPassingSession />} />
-          <Route path="about" element={<About />} />
-        </Routes>
-      </div>
+      <Routes>
+        {/* Home and registration routes without Navbar */}
+        <Route index element={<HomePage />} />
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/registration" element={<RegistrationForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route
+          path="/profile"
+          element={
+            <div>
+              <Navbar />
+              <Profile />
+            </div>
+          }
+        />
+        <Route
+          path="/courses"
+          element={
+            <div>
+              <Navbar />
+              <Courses />
+            </div>
+          }
+        />
+        <Route
+          path="/coaches-corner/*"
+          element={
+            <div>
+              <Navbar />
+              <Routes>
+                <Route path="formations/5-a-side" element={<FiveASide />} />
+                <Route path="formations/7-a-side" element={<SevenASide />} />
+                <Route path="formations/9-a-side" element={<NineASide />} />
+                <Route path="session-plans/u8s/dribbling" element={<U8sDribblingSession />} />
+                <Route path="session-plans/u8s/defending" element={<U8sDefendingSession />} />
+                <Route path="session-plans/u8s/shooting" element={<U8sShootingSession />} />
+                <Route path="session-plans/u8s/passing" element={<U8sPassingSession />} />
+                <Route path="session-plans/u10s/dribbling" element={<U10sDribblingSession />} />
+                <Route path="session-plans/u10s/defending" element={<U10sDefendingSession />} />
+                <Route path="session-plans/u10s/shooting" element={<U10sShootingSession />} />
+                <Route path="session-plans/u10s/passing" element={<U10sPassingSession />} />
+                <Route path="session-plans/u12s/dribbling" element={<U12sDribblingSession />} />
+                <Route path="session-plans/u12s/defending" element={<U12sDefendingSession />} />
+                <Route path="session-plans/u12s/shooting" element={<U12sShootingSession />} />
+                <Route path="session-plans/u12s/passing" element={<U12sPassingSession />} />
+              </Routes>
+            </div>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <div>
+              <Navbar />
+              <About />
+            </div>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
-};
+}
 
+// Render the app
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 reportWebVitals();
