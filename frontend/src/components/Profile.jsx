@@ -1,38 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Profile () {
-  const [userData, setUserData] = useState(null);
+function Profile() {
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('/logout', {
+        method: 'GET',
+        credentials: 'include', 
+      });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/api/v1/user/authenticate', { withCredentials: true });
-
-        if (response.data && response.data.username && response.data.email) {
-          setUserData(response.data);
+      if (response.ok) {
+        const isCookieCleared = !response.headers.has('set-cookie');
+        
+        if (isCookieCleared) {
+          console.log('Logout successful');
+        } else {
+          console.error('Logout failed - Authentication cookie still present');
         }
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-        // Handle error as needed
+      } else {
+        console.error('Logout failed - Server response not OK');
       }
-    };
-
-    fetchData();
-  }, []);
+    } catch (error) {
+      console.error('An error occurred during logout:', error);
+    }
+  };
 
   return (
-    <div>
-      <h1>User Profile</h1>
-      {userData && (
-        <div>
-          <p>Username: {userData.username}</p>
-          <p>Email: {userData.email}</p>
-        </div>
-      )}
-    </div>
+    <Link to="/home" style={{ color: 'white', textDecoration: 'none' }}>
+      <button onClick={handleLogout}>
+        Logout
+      </button>
+    </Link>
   );
-};
+}
 
 export default Profile;
-
