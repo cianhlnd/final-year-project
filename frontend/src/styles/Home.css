@@ -12,7 +12,7 @@ body {
     position: absolute;
     font-size: 25px;
     color: white;
-    background-color: blue;
+    background-color: forestgreen;
     width: 150px;
     height: 50px;
     text-decoration: none;
@@ -26,7 +26,7 @@ body {
     position: absolute;
     font-size: 25px;
     color: white;
-    background-color: blue;
+    background-color: forestgreen;
     width: 150px;
     height: 50px;
     text-decoration: none;
@@ -45,5 +45,5 @@ body {
 
   
   .register:hover, .login:hover {
-    background-color: lightblue;
+    background-color: lightgreen;
   }

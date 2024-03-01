@@ -11,7 +11,7 @@ body {
 /*Styling for page title*/
 .h1 {
   font-size: 40px;
-  transform: translate(-50%, -200%);
+  transform: translatey(-200%);
   left: 50%;
   color: black;
 }
@@ -42,7 +42,7 @@ body {
 .login-button {
   position: absolute;
   font-size: 25px;
-  background-color: blue;
+  background-color: forestgreen;
   color: white;
   width: 150px;
   text-decoration: none;
@@ -54,5 +54,5 @@ body {
   cursor: pointer;
 }
 .login-button:hover {
-  background-color: lightblue;
+  background-color: lightgreen;
 }

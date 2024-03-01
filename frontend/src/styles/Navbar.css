@@ -1,5 +1,5 @@
 nav {
-  background-color: black;
+  background-color: forestgreen;
   margin-top: 70px;
 }
 
@@ -24,30 +24,37 @@ nav li a {
   display: block;
 }
 
+nav li:hover {
+  background-color: lightgreen;
+}
+
 nav li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: black;
+  background-color: forestgreen;
 }
 
-nav .session-plans-submenu,
-nav .session-plans-sub-submenu,
-nav .formations-submenu,
-nav .u8s-u9s-submenu {
+nav .session-plans-submenu {
   left: 100%;
   top: 0;
-  white-space: nowrap; /* Prevent line breaks */
 }
 
 nav .session-plans-sub-submenu,
-nav .u8s-u9s-submenu ul {
-  white-space: normal; /* Allow line breaks for sub-submenu items */
+nav .formations-submenu {
+  left: 100%;
+  top: 0;
+  white-space: nowrap; 
 }
 
-nav .session-plans-submenu > ul {
-  display: flex; /* Use flexbox to keep submenus on the same line */
+nav .formations-submenu:hover {
+  background-color: lightgreen;
+}
+
+nav .session-plans-sub-submenu
+ {
+  white-space: normal; 
 }
 
 nav li:hover > ul {
@@ -62,7 +69,7 @@ nav li div {
 
 nav li:hover > div,
 nav li div:hover {
-  color: yellow; /* Change the color as needed */
+  background-color: lightgreen; 
 }
 
 nav li div,

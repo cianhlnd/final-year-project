@@ -42,7 +42,7 @@ body {
 .register-button {
   position: absolute;
   font-size: 25px;
-  background-color: blue;
+  background-color: forestgreen;
   color: white;
   width: 150px;
   text-decoration: none;
@@ -54,5 +54,5 @@ body {
   cursor: pointer;
 }
 .register-button:hover {
-  background-color: lightblue;
+  background-color: lightgreen;
 }
