@@ -4,7 +4,6 @@ import '../styles/Home.css'
 function HomePage() {
   return (
     <div>
-      <header className="h1">Football Coaching Hub</header>
       <button className="register">
         <Link to="/registration" style={{ color: 'white', textDecoration: 'none' }}>
           Register
