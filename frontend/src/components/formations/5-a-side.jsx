@@ -63,7 +63,7 @@ function FiveASide() {
       </div>
       <div className="header-container">
         <h2>1-2-1 (Diamond)</h2>
-        <img src="/images/5-a-side/2-2.png" alt="2-2" />
+        <img src="/images/5-a-side/1-2-1.png" alt="1-2-1" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -71,20 +71,20 @@ function FiveASide() {
             <ul>
               <li>Easy to explain to kids</li>
               <li>Easy to maintain width</li>
-              <li>Easier to press teams high with 2 attackers</li>
+              <li>Very attacking</li>
             </ul>
           </li>
           <li><strong>Cons:</strong>
             <ul>
-              <li>Can be hard to build out from goal kicks</li>
-              <li>No central players means kids don't get experience playing central positions</li>
-              <li>May end up with too big a gap between defenders and attackers</li>
+              <li>Can be hard to build out from goal kicks with only one defender and no centre mid</li>
+              <li>Dependent on wingers to get up and help attacker and back to help defender</li>
+              <li>Due to it being so attacking can get count on the counter-attack</li>
             </ul>
           </li>
           <li><strong>Tips:</strong>
             <ul>
-              <li>Get both wingers to press onto retreat line</li>
-              <li>Team goes wide in possession (big box) and narrow and compact out of possession (small box)</li>
+              <li>Get on the striker to press onto retreat line to be defensively responsible</li>
+              <li>Team goes wide in possession (big diamond) and narrow and compact out of possession (small diamond)</li>
             </ul>
           </li>
         </ul>
