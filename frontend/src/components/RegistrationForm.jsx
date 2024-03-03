@@ -19,7 +19,10 @@ function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/v1/public/register', formData);
+      const response = await axios.post('http://localhost:3001/api/v1/public/register', formData, {
+        withCredentials: true, 
+      });
+
 
       if (response.status === 201) {
         console.log('User registered successfully:', response.data);

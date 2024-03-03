@@ -18,7 +18,9 @@ function LoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/v1/public/login', formData);
+      const response = await axios.post('http://localhost:3001/api/v1/public/login', formData, {
+        withCredentials: true, 
+      });
 
       if (response.status === 200 && response.data.message === 'Authenticated') {
         console.log('User logged-in successfully:', response.data);
