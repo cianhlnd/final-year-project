@@ -30,15 +30,30 @@ router.use(async function(req, res, next) {
         return;
     }
 });
-/*router.route("/authenticate")
+router.route("/authenticate")
     .get(function(req,res){
         //console.log(req.user);
         res.status(200).json({username:req.user.username, data: req.user.data});
-    })*/
+    })
 router.route("/logout")
     .get(function(req,res){
         res.clearCookie('appjwt');
         res.status(200).json({message:"Logged out"});
     })
+router.route("/profile")
+    .get(async function(req, res) {
+        if (!req.user) {
+            res.status(401).json({error: "User not authenticated"});
+            return;
+        }
+        
+        const user = await UserModel.findOne({username: req.user.username}).select("-password"); // Exclude password from the result
+        if (!user) {
+            res.status(404).json({error: "User not found"});
+            return;
+        }
+
+        res.status(200).json({username: user.username, email: user.email});
+    });
 
 module.exports = router;
