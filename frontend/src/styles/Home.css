@@ -1,49 +1,82 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    height: 100vh;
-  }
-  .register {
-    position: absolute;
-    font-size: 25px;
-    color: white;
-    background-color: forestgreen;
-    width: 150px;
-    height: 50px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid black;
-    transform: translateX(-50%);
-    top: 40%;
-    left: 50%;
-  }
-  .login {
-    position: absolute;
-    font-size: 25px;
-    color: white;
-    background-color: forestgreen;
-    width: 150px;
-    height: 50px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid black;
-    transform: translateX(-50%);
-    top: 60%;
-    left: 50%;
-  }
-
-  .register .link-style,
-.login .link-style {
-  color: white;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-image: linear-gradient(forestgreen, white);
 }
 
-  
-  .register:hover, .login:hover {
-    background-color: lightgreen;
-  }
+.form-box {
+  width:380px;
+  height: 480px;
+  position:relative;
+  margin: 6%auto;
+  background: white;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px forestgreen;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, forestgreen, lightgreen);
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.submit-btn {
+  width:85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,forestgreen, lightgreen);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+#login{
+  left:50px;
+}
+#register{
+  left:450px;
+}
