@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaComment } from 'react-icons/fa';
+import '../styles/Profile.css'
 
 function Profile() {
   const [userDetails, setUserDetails] = useState({ username: '', email: '' });
@@ -52,15 +54,26 @@ function Profile() {
 
   return (
     <div>
+      <div className = "profile-container">
       <h2>Profile Details</h2>
       <p>Username: {userDetails.username}</p>
       <p>Email: {userDetails.email}</p>
       <Link to="/homepage" style={{ color: 'white', textDecoration: 'none' }}>
-        <button onClick={handleLogout}>
+        <button className = "logout-btn" onClick={handleLogout}>
           Logout
         </button>
       </Link>
+      
     </div>
+    
+    <div className="speech-bubble">
+    <div className="speech-text">
+        IDEAL: Introduction, Demonstrate, Explain, Assessment, Link
+    </div>
+    <FaComment size={200} color="white"/>
+</div>
+    </div>
+
   );
 }
 
