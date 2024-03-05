@@ -1,6 +1,7 @@
 nav {
   background-color: forestgreen;
   margin-top: 70px;
+  height: 41px;
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -15,14 +16,16 @@ nav li {
   position: relative;
   color: white;
   display: inline-block;
-  margin-right: 20px;
   cursor: pointer;
+  width: 120px;
+  height: 21px;
+  text-align: center;
+  padding: 10px;
 }
 
 nav li a {
   text-decoration: none;
   color: inherit;
-  padding: 10px;
   display: block;
 }
 
@@ -30,65 +33,25 @@ nav li:hover {
   background-color: lightgreen;
 }
 
-nav li ul {
+nav li > ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: forestgreen;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-nav .session-plans-submenu {
-  left: 100%;
+nav li ul ul {
+  display: none;
   top: 0;
+  left: 100%; 
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-nav .session-plans-sub-submenu,
-nav .formations-submenu {
-  left: 100%;
-  top: 0;
-  white-space: nowrap; 
-}
-
-nav .formations-submenu:hover {
-  background-color: lightgreen;
-}
-
-nav .session-plans-sub-submenu
- {
-  white-space: normal; 
-}
-
-nav li:hover > ul {
-  display: block;
-}
-
-nav li div {
-  color: white;
-  padding: 10px;
-  display: block;
-}
-
-nav li:hover > div,
-nav li div:hover {
-  background-color: lightgreen; 
-}
-
-nav li div,
-nav li:hover {
-  cursor: pointer;
-}
-
-nav li div:hover + ul {
-  display: block;
-}
-
-nav li ul li {
-  margin-left: 0;
-}
-
-nav li ul li a {
-  color: white;
-  padding: 10px;
+nav li:hover > ul,
+nav li ul li:hover > ul {
   display: block;
 }

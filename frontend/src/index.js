@@ -5,8 +5,6 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './styles/Navbar.css';
 import HomePage from './components/HomePage';
 import reportWebVitals from './reportWebVitals';
-import RegistrationForm from './components/RegistrationForm';
-import LoginForm from './components/LoginForm';
 import Profile from './components/Profile';
 import Courses from './components/coursedatabase/Courses';
 import U8sDribblingSession from './components/sessionplans/u8s-u9s/u8sDribblingSession';
@@ -27,94 +25,75 @@ import NineASide from './components/formations/9-a-side';
 import About from './components/About';
 
 // Navbar component
+// Corrected submenu structure for "Session Plans"
+const menuItems = [
+  { name: "Profile", link: "/profile" },
+  { name: "Courses", link: "/courses" },
+  {
+    name: "Coaches Corner",
+    submenu: [
+      {
+        name: "Formations",
+        submenu: [
+          { name: "5-a-side", link: "/coaches-corner/formations/5-a-side" },
+          { name: "7-a-side", link: "/coaches-corner/formations/7-a-side" },
+          { name: "9-a-side", link: "/coaches-corner/formations/9-a-side" },
+        ],
+      },
+      {
+        name: "Session Plans",
+        submenu: [
+          {
+            name: "u8s-u9s",
+            submenu: [
+              { name: "Defending", link: "/coaches-corner/session-plans/u8s/defending" },
+              { name: "Dribbling", link: "/coaches-corner/session-plans/u8s/dribbling" },
+            ]
+          },
+          {
+            name: "u10s-u11s",
+            submenu: [
+              { name: "Defending", link: "/coaches-corner/session-plans/u10s/defending" },
+              // Add other links as needed
+            ]
+          }
+        ]
+      }
+    ],
+  },
+  { name: "About", link: "/about" },
+];
+
 function Navbar() {
+  const renderMenuItems = (items) => {
+    if (!Array.isArray(items)) {
+      console.error('Expected an array, but received:', items);
+      return null;
+    }
+
+    return items.map((item) => (
+      <li key={item.name}>
+        {item.link ? <Link to={item.link}>{item.name}</Link> : item.name}
+        {item.submenu && Array.isArray(item.submenu) && (
+          <ul>
+            {renderMenuItems(item.submenu)}
+          </ul>
+        )}
+      </li>
+    ));
+  };
+
+  // Use the renderMenuItems function to actually render the menu
   return (
     <nav>
       <ul>
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
-        <li>
-          <Link to="/courses">Courses</Link>
-        </li>
-        <li>
-          Coaches Corner
-          <ul>
-            <li>
-              <div>Formations</div>
-              <ul className="formations-submenu">
-                <li>
-                  <Link to="/coaches-corner/formations/5-a-side">5-a-side</Link>
-                  <Link to="/coaches-corner/formations/7-a-side">7-a-side</Link>
-                  <Link to="/coaches-corner/formations/9-a-side">9-a-side</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div>Session Plans</div>
-              <ul className="session-plans-submenu">
-                <li>
-                  <div>u8s-u9s</div>
-                  <ul className="session-plans-sub-submenu">
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u8s/dribbling">Dribbling Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u8s/defending">Defending Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u8s/shooting">Shooting Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u8s/passing">Passing Session</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <div>u10s-u11s</div>
-                  <ul className="session-plans-sub-submenu">
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u10s/dribbling">Dribbling Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u10s/defending">Defending Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u10s/shooting">Shooting Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u10s/passing">Passing Session</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <div>u12s</div>
-                  <ul className="session-plans-sub-submenu">
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u12s/dribbling">Dribbling Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u12s/defending">Defending Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u12s/shooting">Shooting Session</Link>
-                    </li>
-                    <li>
-                      <Link to="/coaches-corner/session-plans/u12s/passing">Passing Session</Link>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
+        {renderMenuItems(menuItems)}
       </ul>
     </nav>
   );
 }
+
+export default Navbar;
 
 // App component
 function App() {
@@ -124,8 +103,6 @@ function App() {
         {/* Home and registration routes without Navbar */}
         <Route index element={<HomePage />} />
         <Route path="/homepage" element={<HomePage />} />
-        <Route path="/registration" element={<RegistrationForm />} />
-        <Route path="/login" element={<LoginForm />} />
         <Route
           path="/profile"
           element={
