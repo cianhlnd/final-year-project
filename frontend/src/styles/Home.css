@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background-image: linear-gradient(forestgreen, white);
+  background-image: linear-gradient(to right,forestgreen, lightgreen);
 }
 
 .form-box {
@@ -73,6 +73,9 @@ body {
   border: 0;
   outline: none;
   border-radius: 30px;
+}
+.submit-btn:hover {
+  background-color: lightgreen
 }
 #login{
   left:50px;
