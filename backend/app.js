@@ -13,8 +13,10 @@ app.use(cors({
 }));
 var apiRoutes = require("./routes/apiRoutes");
 var authApiRoutes = require("./routes/authApiRoutes");
+var reviewRoutes = require("./routes/reviewRoutes");
 app.use("/api/v1/public",apiRoutes);
 app.use("/api/v1/user",authApiRoutes);
+app.use("/api/v1/reviews", reviewRoutes);
 app.listen(port, () => { 
     console.log(`App is listening on port ${port}`);
 });
