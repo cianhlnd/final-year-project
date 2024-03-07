@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Home.css'; // Assume this CSS now includes the styles from Registration.css
+import '../styles/Home.css';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -60,14 +60,12 @@ function HomePage() {
         <button type="submit" className="submit-btn">Login</button>
       </form>
       ) : (
-        // For the Registration Form
-<form className="input-group" onSubmit={handleSubmit} style={{ left: isLoginView ? '450px' : '50px' }}>
-  <input type="text" name="username" className="input-field" placeholder="username" onChange={handleChange} value={formData.username} autoComplete="off" required />
-  <input type="email" name="email" className="input-field" placeholder="email address" onChange={handleChange} value={formData.email} autoComplete="off" required />
-  <input type="password" name="password" className="input-field" placeholder="password" onChange={handleChange} value={formData.password} autoComplete="off" required />
-  <button type="submit" className="submit-btn">Register</button>
-</form>
-
+      <form className="input-group" onSubmit={handleSubmit} style={{ left: isLoginView ? '450px' : '50px' }}>
+        <input type="text" name="username" className="input-field" placeholder="username" onChange={handleChange} value={formData.username} autoComplete="off" required />
+        <input type="email" name="email" className="input-field" placeholder="email address" onChange={handleChange} value={formData.email} autoComplete="off" required />
+        <input type="password" name="password" className="input-field" placeholder="password" onChange={handleChange} value={formData.password} autoComplete="off" required />
+        <button type="submit" className="submit-btn">Register</button>
+      </form>
       )}
     </div>
   );
