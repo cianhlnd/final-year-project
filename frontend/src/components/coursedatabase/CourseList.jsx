@@ -3,7 +3,9 @@ import '../../styles/CourseList.css';
 
 function CourseList ({ courses, searchTerm, onSearch }) {
   const filteredCourses = courses.filter((course) =>
-    course.title.toLowerCase().includes(searchTerm.toLowerCase())
+    course.title.toLowerCase().includes(searchTerm.toLowerCase())||
+    course.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    course.date.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -14,7 +16,7 @@ function CourseList ({ courses, searchTerm, onSearch }) {
             <p>Title: {course.title}</p>
             <p>Location: {course.location}</p>
             <p>Date: {course.date}</p>
-            <a href={course.link} target="_blank" rel="noopener noreferrer">
+            <a href={course.link} target="_blank" rel="noopener noreferrer" className = "book-btn">
               Book Now
             </a>
           </div>
