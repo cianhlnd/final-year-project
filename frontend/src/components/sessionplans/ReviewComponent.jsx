@@ -27,8 +27,8 @@ function ReviewComponent({ imageName }) {
   };
 
   return (
-    <div>
-      <div className>
+    <div className='flex-container'>
+      <div className = "flexbox-item-1">
         {[...Array(5)].map((star, index) => {
           const ratingValue = index + 1;
 
@@ -42,7 +42,6 @@ function ReviewComponent({ imageName }) {
                 style={{ display: 'none' }}
               />
               <FaStar
-                className="star"
                 color={ratingValue <= (hover || rating) ? "yellow" : "grey"}
                 size={20}
                 onMouseEnter={() => setHover(ratingValue)}
@@ -51,7 +50,7 @@ function ReviewComponent({ imageName }) {
           );
         })}
       </div>
-      <button onClick={submitRating} className = "review-button">Submit Review</button> 
+      <button onClick={submitRating}>Submit Review</button> 
     </div>
   );
 }

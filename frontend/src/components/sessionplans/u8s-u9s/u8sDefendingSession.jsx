@@ -35,24 +35,27 @@ function U8sDefendingSession() {
   };
 
   return (
-    <div>
-      <h1 className="u8s-header">Defending</h1>
+    <div className="flex-container">
       {sessionPlans.map((plan, index) => (
-        <div key={index}>
-          <ImageDownload
-            imageUrl={plan.imageUrl}
-            imageName={plan.imageName}
-            imageSize="475px"
-          />
-          <div className = "review-container">
-          <ReviewComponent imageName={plan.imageName}/>
-          <ReviewsDisplay imageName={plan.imageName}/>
+        <div key={index} className="inner-flex-container">
+          <div className="flex-container-1">
+            <ImageDownload
+              imageUrl={plan.imageUrl}
+              imageName={plan.imageName}
+              imageSize="475px"
+            />
+          </div>
+          <div className="flex-container-2">
+            <div className = "review-box">
+            <ReviewsDisplay imageName={plan.imageName}/>
+            <ReviewComponent imageName={plan.imageName}/>
+            </div>
           </div>
         </div>
       ))}
-      <button onClick={downloadAllSessionPlans} className = "all-button">Download All Plans</button>
+      <button onClick={downloadAllSessionPlans}>Download All Plans</button>
     </div>
-  );
+  );  
 }
 
 export default U8sDefendingSession;

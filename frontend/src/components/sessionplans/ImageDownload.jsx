@@ -13,18 +13,20 @@ function ImageDownload({ imageUrl, imageName, imageSize }) {
   };
 
   return (
-    <div className="image-download-container">
-      <div className="image-container">
+    <div className = "flex-container-1">
+      <div>
         <img
           src={imageUrl}
           alt={imageName}
-          className="image-download"
           style={{ width: imageSize, height: 'auto' }}
         />
-        <button className="download-button" onClick={handleDownload}>
+      </div>
+      <div>
+        <button onClick={handleDownload}>
           Download {imageName}
         </button>
       </div>
+        
     </div>
   );
 }
