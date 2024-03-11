@@ -57,7 +57,7 @@ build frontend app:
   variables:
     CI: "false"
   script:
-    - cd client
+    - cd frontend
     - ln -s /app/node_modules/
     - npm run build
 
