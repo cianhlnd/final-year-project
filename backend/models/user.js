@@ -5,12 +5,6 @@ const {generateHash, passwordCheck} =  require('../encryptUtility.js')
 //https://stackoverflow.com/questions/14588032/mongoose-password-hashing
 
 //Schema for a user 
-const ApplicationSchema = new Schema({
-    coaching_courses: {
-        type: String, 
-        required: true, 
-    }
-});
 const UserSchema = new Schema({
     username: {
         type: String, 
@@ -23,7 +17,6 @@ const UserSchema = new Schema({
         index: {unique: true, dropDups: true}
     },
     password: {type: String, required: true},
-    data : {type: [ApplicationSchema], "default": []},
 });
 
 //Ensures password is hashed before saving, make sure not to use save for updating
@@ -40,4 +33,4 @@ UserSchema.pre('save',function(next){
     next();
 });
 
-module.exports = mongoose.model('Users',UserSchema)
+module.exports = mongoose.model('Users',UserSchema, 'users')

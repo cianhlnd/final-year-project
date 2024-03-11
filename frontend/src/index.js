@@ -1,4 +1,3 @@
-// Import necessary components and modules
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -25,7 +24,6 @@ import NineASide from './components/formations/9-a-side';
 import About from './components/About';
 
 // Navbar component
-// Corrected submenu structure for "Session Plans"
 const menuItems = [
   { name: "Profile", link: "/profile" },
   { name: "Courses", link: "/courses" },
@@ -54,7 +52,6 @@ const menuItems = [
             name: "u10s-u11s",
             submenu: [
               { name: "Defending", link: "/coaches-corner/session-plans/u10s/defending" },
-              // Add other links as needed
             ]
           }
         ]
@@ -83,7 +80,6 @@ function Navbar() {
     ));
   };
 
-  // Use the renderMenuItems function to actually render the menu
   return (
     <nav>
       <ul>
