@@ -1,14 +1,10 @@
 name: fyp24jd011
-
+# main docker compose file. some parameters are overriden in additional files
+# like docker-compose.override.yml or docker-compose.test.yml
 services:
-  frontend:
-    build:
-      context: frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-
   backend:
+    image: fyp24jd011/backend:dev
     build:
       context: backend
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
+      target: dev
