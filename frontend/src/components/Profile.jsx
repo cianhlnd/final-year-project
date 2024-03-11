@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaComment } from 'react-icons/fa';
 import '../styles/Profile.css'
+import { backendUrl } from '../config.js';
 
 function Profile() {
   const [userDetails, setUserDetails] = useState({ username: '', email: '' });
@@ -9,7 +10,7 @@ function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/v1/user/profile', {
+        const response = await fetch(`${backendUrl}/api/v1/user/profile`, {
           method: 'GET',
           credentials: 'include',
         });
@@ -31,7 +32,7 @@ function Profile() {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/v1/user/logout', {
+      const response = await fetch(`${backendUrl}/api/v1/user/logout`, {
         method: 'GET',
         credentials: 'include', 
       });

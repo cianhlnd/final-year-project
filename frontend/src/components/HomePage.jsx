@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css'; // Assume this CSS now includes the styles from Registration.css
+import { backendUrl } from '../config.js';
+
 
 function HomePage() {
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ function HomePage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const endpoint = isLoginView ? 'http://localhost:3001/api/v1/public/login' : 'http://localhost:3001/api/v1/public/register';
+    const endpoint = isLoginView ? `${backendUrl}/api/v1/public/login` : `${backendUrl}/api/v1/public/register`;
     try {
       const response = await axios.post(endpoint, formData, {
         withCredentials: true,
