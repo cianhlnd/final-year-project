@@ -7,7 +7,7 @@ function SevenASide() {
       <div className="header-container">
         <h1>7-a-side formations (u10s-u11s)</h1>
         <h2>2-2-2 (Rectangle)</h2>
-        <img className = "formation-img" src="/images/7-a-side/2-2-2.png" alt="2-2-2" />
+        <img className = "formation-img" src={`${process.env.PUBLIC_URL}/images/5-a-side/2-2-2.png`} alt="2-2-2" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -34,7 +34,7 @@ function SevenASide() {
       </div>
       <div className="header-container">
         <h2>2-3-1 (Christmas Tree)</h2>
-        <img className = "formation-img" src="/images/7-a-side/2-3-1.png" alt="2-3-1" />
+        <img className = "formation-img" src={`${process.env.PUBLIC_URL}/images/5-a-side/2-3-1.png`} alt="2-3-1" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -63,7 +63,7 @@ function SevenASide() {
       </div>
       <div className="header-container">
         <h2>3-2-1 (Arrow)</h2>
-        <img className = "formation-img" src="/images/7-a-side/3-2-1.png" alt="3-2-1" />
+        <img className = "formation-img" src={`${process.env.PUBLIC_URL}/images/5-a-side/3-2-1.png`} alt="3-2-1" />
       </div>
       <div className="list-container">
         <ul className="list-item">
