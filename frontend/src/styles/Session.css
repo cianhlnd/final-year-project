@@ -175,3 +175,8 @@
   width: 60%;
   margin: 20px auto;
 }
+
+.session-image {
+  border: 2px solid black;
+  border-radius: 5px;
+}

@@ -15,7 +15,7 @@ function ImageDownload({ imageUrl, imageName, imageSize }) {
   return (
     <div className = "flex-container-1">
       <div>
-        <img
+        <img className = "session-image"
           src={imageUrl}
           alt={imageName}
           style={{ width: imageSize, height: 'auto' }}

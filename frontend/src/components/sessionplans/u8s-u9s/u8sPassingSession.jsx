@@ -1,68 +1,85 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import JSZip from 'jszip';
+import { saveAs } from 'file-saver';
+import ImageDownload from '../ImageDownload';
+import ReviewComponent from '../ReviewComponent';
+import ReviewsDisplay from '../ReviewsDisplay';
 import '../../../styles/Session.css';
 
-function ImageDownload ({ imageUrl, imageName, imageSize }) {
-  const handleDownload = () => {
-    // Create an anchor element
-    const link = document.createElement('a');
-    link.href = imageUrl;
-    link.download = imageName;
+function U8sPassingSession() {
+  const sessionPlans = [
+    {
+      imageUrl: process.env.PUBLIC_URL + '/images/u8s-u9s/passing/0.png',
+      imageName: 'u8s-u9s-passing-warm-up.png',
+    },
+    {
+      imageUrl: process.env.PUBLIC_URL + '/images/u8s-u9s/passing/1.png',
+      imageName: 'u8s-u9s-passing-drill-1.png',
+    },
+    {
+      imageUrl: process.env.PUBLIC_URL + '/images/u8s-u9s/passing/2.png',
+      imageName: 'u8s-u9s-passing-drill-2.png',
+    },
+    {
+      imageUrl: process.env.PUBLIC_URL + '/images/u8s-u9s/match.png',
+      imageName: '5-a-side-match.png',
+    },
+  ];
 
-    // Append the anchor to the body
-    document.body.appendChild(link);
-
-    // Trigger a click on the anchor to initiate the download
-    link.click();
-
-    // Remove the anchor from the body
-    document.body.removeChild(link);
+  const downloadAllSessionPlans = async () => {
+    const zip = new JSZip();
+    for (const plan of sessionPlans) {
+      const response = await fetch(plan.imageUrl);
+      const blob = await response.blob();
+      zip.file(plan.imageName, blob, { binary: true });
+    }
+    zip.generateAsync({ type: 'blob' }).then((content) => {
+      saveAs(content, 'u8s-defending-session-plans.zip');
+    });
   };
 
   return (
-    <div className="image-download-container">
-      <div className="image-container">
-        <img
-          src={imageUrl}
-          alt={imageName}
-          className="image-download"
-          style={{ width: imageSize, height: 'auto' }}
-        />
-        <button className="download-button" onClick={handleDownload}>
-          Download {imageName}
-        </button>
-      </div>
+    <div className="session-container">
+      <h1 className="title">U8s-U9s Passing</h1>
+      <button className="info-button">i
+        <span className="info-text">Each drill should be 15 minutes with a match at the end</span>
+      </button>
+      {sessionPlans.map((plan, index) => {
+        if (plan.imageName === '5-a-side-match.png') {
+          return (
+            <div key={index} className="match-image-container">
+              <ImageDownload
+                imageUrl={plan.imageUrl}
+                imageName={plan.imageName}
+                imageSize="700px"
+              />
+            </div>
+          );
+        } else {
+          return (
+            <div key={index} className="inner-flex-container">
+              <div className="flex-container-1">
+                <ImageDownload
+                  imageUrl={plan.imageUrl}
+                  imageName={plan.imageName}
+                  imageSize="500px"
+                />
+              </div>
+              <div className="flex-container-2">
+                <div className="review-box">
+                  <ReviewsDisplay imageName={plan.imageName}/>
+                  <ReviewComponent imageName={plan.imageName}/>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
+      <button className="download-all-button" onClick={downloadAllSessionPlans}>
+        Download All Plans
+      </button>
     </div>
   );
-};
-
-ImageDownload.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  imageName: PropTypes.string.isRequired,
-  imageSize: PropTypes.string.isRequired,
-};
-
-function U8sPassingSession  () {
-  return (
-    <div>
-      <header className = "u8s-header">Passing</header>
-      <ImageDownload
-        imageUrl={process.env.PUBLIC_URL + '/images/u8s-u9s/passing/0.png'}
-        imageName="u8s-u9s-passing-warm-up.png"
-        imageSize="500px"
-      />
-      <ImageDownload
-        imageUrl={process.env.PUBLIC_URL + '/images/u8s-u9s/dribbling/1.png'}
-        imageName="u8s-u9s-passing-drill-1.png"
-        imageSize="500px"
-      />
-      <ImageDownload
-        imageUrl={process.env.PUBLIC_URL + '/images/u8s-u9s/dribbling/2.png'}
-        imageName="u8s-u9s-passing-drill-2.png"
-        imageSize="500px"
-      />
-    </div>
-  );
-};
+}
 
 export default U8sPassingSession;

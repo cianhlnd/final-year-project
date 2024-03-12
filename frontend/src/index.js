@@ -48,12 +48,26 @@ const menuItems = [
             submenu: [
               { name: "Defending", link: "/coaches-corner/session-plans/u8s/defending" },
               { name: "Dribbling", link: "/coaches-corner/session-plans/u8s/dribbling" },
+              { name: "Passing", link: "/coaches-corner/session-plans/u8s/passing" },
+              { name: "Shooting", link: "/coaches-corner/session-plans/u8s/shooting" },
             ]
           },
           {
             name: "u10s-u11s",
             submenu: [
               { name: "Defending", link: "/coaches-corner/session-plans/u10s/defending" },
+              { name: "Dribbling", link: "/coaches-corner/session-plans/u10s/dribbling" },
+              { name: "Passing", link: "/coaches-corner/session-plans/u10s/passing" },
+              { name: "Shooting", link: "/coaches-corner/session-plans/u10s/shooting" },
+            ]
+          },
+          {
+            name: "u12s",
+            submenu: [
+              { name: "Defending", link: "/coaches-corner/session-plans/u12s/defending" },
+              { name: "Dribbling", link: "/coaches-corner/session-plans/u12s/dribbling" },
+              { name: "Passing", link: "/coaches-corner/session-plans/u12s/passing" },
+              { name: "Shooting", link: "/coaches-corner/session-plans/u12s/shooting" },
             ]
           }
         ]

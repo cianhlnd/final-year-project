@@ -34,15 +34,15 @@ function U8sDefendingSession() {
       zip.file(plan.imageName, blob, { binary: true });
     }
     zip.generateAsync({ type: 'blob' }).then((content) => {
-      saveAs(content, 'u8s-defending-session-plans.zip');
+      saveAs(content, 'u8s-u9s-defending-session-plans.zip');
     });
   };
 
   return (
     <div className="session-container">
-      <h1 className="title">U8s Defending</h1>
-      <button class="info-button">i
-        <span class="info-text">Each drill should be 15 minutes each</span>
+      <h1 className="title">U8s-U9s Defending</h1>
+      <button className="info-button">i
+        <span className="info-text">Each drill should be 15 minutes with a match at the end</span>
       </button>
       {sessionPlans.map((plan, index) => {
         if (plan.imageName === '5-a-side-match.png') {
