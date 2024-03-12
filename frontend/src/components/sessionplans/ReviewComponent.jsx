@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { backendUrl } from '../../config';
 
 function ReviewComponent({ imageName }) {
   const [rating, setRating] = useState(0); 
@@ -12,9 +13,8 @@ function ReviewComponent({ imageName }) {
       alert('Please select a valid rating between 1 and 5.');
       return;
     }
-
     try {
-      await axios.post('http://localhost:3001/api/v1/reviews/submit', {
+      await axios.post(`${backendUrl}/api/v1/reviews/submit`, {
         imageName,
         rating,
       }, { withCredentials: true });

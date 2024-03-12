@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { backendUrl } from '../../config';
 
 function ReviewsDisplay({ imageName }) {
   const [reviews, setReviews] = useState([]);
@@ -8,7 +9,7 @@ function ReviewsDisplay({ imageName }) {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/v1/reviews/reviews/${imageName}`, { withCredentials: true });
+        const response = await axios.get(`${backendUrl}/api/v1/reviews/reviews/${imageName}`, { withCredentials: true });
         setReviews(response.data.reviews);
         setAverageRating(response.data.averageRating);
       } catch (error) {
