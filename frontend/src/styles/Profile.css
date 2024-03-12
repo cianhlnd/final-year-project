@@ -32,6 +32,7 @@
     transform: translateX(-50%);
     position:absolute;
     margin-top:20px;
+    border: 2px solid black;
 }
 .logout-btn:hover {
     background: lightgreen;

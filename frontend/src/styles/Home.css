@@ -92,3 +92,10 @@ body {
 #register{
   left:450px;
 }
+.img-logo {
+  height: 125px;
+  width: 125px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

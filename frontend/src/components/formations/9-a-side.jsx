@@ -5,9 +5,9 @@ function NineASide() {
   return (
     <div className="container">
       <div className="header-container">
-        <h1>9-a-side formations (u8s-u9s)</h1>
+        <h1>9-a-side formations (u12s)</h1>
         <h2>2-3-3</h2>
-        <img src="/images/9-a-side/2-3-3.png" alt="2-3-3" />
+        <img className = "formation-img" src="/images/9-a-side/2-3-3.png" alt="2-3-3" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -35,7 +35,7 @@ function NineASide() {
       </div>
       <div className="header-container">
         <h2>3-2-3</h2>
-        <img src="/images/9-a-side/3-2-3.png" alt="3-2-3" />
+        <img className = "formation-img" src="/images/9-a-side/3-2-3.png" alt="3-2-3" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -62,7 +62,7 @@ function NineASide() {
       </div>
       <div className="header-container">
         <h2>3-3-2</h2>
-        <img src="/images/9-a-side/3-3-2.png" alt="3-3-2" />
+        <img className = "formation-img" src="/images/9-a-side/3-3-2.png" alt="3-3-2" />
       </div>
       <div className="list-container">
         <ul className="list-item">

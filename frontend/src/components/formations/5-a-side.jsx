@@ -7,7 +7,7 @@ function FiveASide() {
       <div className="header-container">
         <h1>5-a-side formations (u8s-u9s)</h1>
         <h2>2-1-1 (Christmas Tree)</h2>
-        <img src="/images/5-a-side/2-1-1.png" alt="2-1-1" />
+        <img className = "formation-img" src="/images/5-a-side/2-1-1.png" alt="2-1-1" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -35,7 +35,7 @@ function FiveASide() {
       </div>
       <div className="header-container">
         <h2>2-2 (Box)</h2>
-        <img src="/images/5-a-side/2-2.png" alt="2-2" />
+        <img className = "formation-img" src="/images/5-a-side/2-2.png" alt="2-2" />
       </div>
       <div className="list-container">
         <ul className="list-item">
@@ -63,7 +63,7 @@ function FiveASide() {
       </div>
       <div className="header-container">
         <h2>1-2-1 (Diamond)</h2>
-        <img src="/images/5-a-side/1-2-1.png" alt="1-2-1" />
+        <img className = "formation-img"src="/images/5-a-side/1-2-1.png" alt="1-2-1" />
       </div>
       <div className="list-container">
         <ul className="list-item">

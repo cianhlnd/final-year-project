@@ -1,10 +1,11 @@
 nav {
   background-color: darkorange;
   height: 41px;
-  border-radius: 2px;
+  border-radius: 5px;
   position: relative;
   display: flex;
   z-index: 1000;
+  border: 1px solid black;
 }
 
 nav ul {
@@ -24,6 +25,7 @@ nav li {
   height: 21px;
   text-align: center;
   padding: 10px;
+  border-right: 1px solid black;
 }
 
 nav li a {
@@ -35,7 +37,7 @@ nav li a {
 
 nav li:hover {
   background-color: orange;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 nav li > ul {
@@ -44,14 +46,17 @@ nav li > ul {
   top: 100%;
   left: 0;
   color: white;
-  border-radius: 2px;
+  border-radius: 5px;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 nav li ul ul {
   display: none;
   top: 0;
   left: 100%;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 nav li:hover > ul,

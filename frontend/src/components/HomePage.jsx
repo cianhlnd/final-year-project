@@ -52,11 +52,12 @@ function HomePage() {
     <div className="form-box">
       <div className="button-box">
         <div id="btn" style={{ left: togglePosition }}></div>
-        <button type="button" className="toggle-btn" onClick={() => setIsLoginView(true)}>Log In</button>
+        <button type="button" className="toggle-btn" onClick={() => setIsLoginView(true)}>Login</button>
         <button type="button" className="toggle-btn" onClick={() => setIsLoginView(false)}>Register</button>
       </div>
+      <img src={`${process.env.PUBLIC_URL}/Football-Coaching-Hub.png`} alt="Logo" className = "img-logo"/>
       {isLoginView ? (
-        <form className="input-group" onSubmit={handleSubmit} style={{ left: isLoginView ? '50px' : '-400px' }}>
+      <form className="input-group" onSubmit={handleSubmit} style={{ left: isLoginView ? '50px' : '-400px' }}>
         <input type="email" name="email" className="input-field" placeholder="email address" onChange={handleChange} value={formData.email} autoComplete="email" required />
         <input type="password" name="password" className="input-field" placeholder="password" onChange={handleChange} value={formData.password} autoComplete="current-password" required />
         <button type="submit" className="submit-btn">Login</button>
