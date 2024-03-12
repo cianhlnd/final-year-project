@@ -1,0 +1,15 @@
+# docker compose overrides for local development
+
+services:
+  frontend:
+    image: fyp24jd011/frontend:dev
+    build:
+      context: frontend
+      dockerfile: docker/Dockerfile
+      target: dev
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      target: dev

@@ -1,0 +1,19 @@
+# docker compose overrides for production emulation testing
+services:
+  frontend:
+    image: fyp24jd011/frontend:test
+    build:
+      context: frontend
+      dockerfile: docker/Dockerfile
+      target: runner
+      args:
+        PUBLIC_URL: "/projects/FYP24JD011"
+        REACT_APP_BACKEND: "/projects/FYP24JD011/backend"
+    ports:
+      - 8080:80
+    restart:
+      always
+
+  backend:
+    environment:
+      Secret_Key: jwt_epaet9oop7quaiXoowei4feuz8aek6io

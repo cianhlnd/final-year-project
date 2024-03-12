@@ -96,7 +96,7 @@ export default Navbar;
 // App component
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         {/* Homepage without navbar */}
         <Route index element={<HomePage />} />

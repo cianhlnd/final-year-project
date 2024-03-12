@@ -1,0 +1,11 @@
+# docker compose used on production server (together with docker-compose.yml)
+# since frontend is not dockerized, it is not defined in these files
+services:
+  backend:
+    image: ${CI_REGISTRY_IMAGE}/backend:${CI_COMMIT_REF_SLUG}
+    environment:
+      Secret_Key: ${CI_SECRET_KEY}
+    ports:
+      - "127.0.0.1:${CI_PORT}:3001"
+    restart:
+      always
