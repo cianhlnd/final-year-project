@@ -22,7 +22,7 @@ function ImageDownload({ imageUrl, imageName, imageSize }) {
         />
       </div>
       <div>
-        <button onClick={handleDownload}>
+        <button className = "download-button" onClick={handleDownload}>
           Download {imageName}
         </button>
       </div>

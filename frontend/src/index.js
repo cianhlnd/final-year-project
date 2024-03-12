@@ -22,6 +22,7 @@ import FiveASide from './components/formations/5-a-side';
 import SevenASide from './components/formations/7-a-side';
 import NineASide from './components/formations/9-a-side';
 import About from './components/About';
+import Files from './components/Files';
 
 // Navbar component
 const menuItems = [
@@ -30,6 +31,7 @@ const menuItems = [
   {
     name: "Coaches Corner",
     submenu: [
+      {name: "Files", link: "/coaches-corner/files"},
       {
         name: "Formations",
         submenu: [
@@ -96,7 +98,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Home and registration routes without Navbar */}
+        {/* Homepage without navbar */}
         <Route index element={<HomePage />} />
         <Route path="/homepage" element={<HomePage />} />
         <Route
@@ -123,6 +125,7 @@ function App() {
             <div>
               <Navbar />
               <Routes>
+                <Route path="files" element={<Files />} />
                 <Route path="formations/5-a-side" element={<FiveASide />} />
                 <Route path="formations/7-a-side" element={<SevenASide />} />
                 <Route path="formations/9-a-side" element={<NineASide />} />

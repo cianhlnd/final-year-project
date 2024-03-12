@@ -20,6 +20,10 @@ function U8sDefendingSession() {
       imageUrl: process.env.PUBLIC_URL + '/images/u8s-u9s/defending/2.png',
       imageName: 'u8s-u9s-defending-drill-2.png',
     },
+    {
+      imageUrl: process.env.PUBLIC_URL + '/images/u8s-u9s/match.png',
+      imageName: '5-a-side-match.png',
+    },
   ];
 
   const downloadAllSessionPlans = async () => {
@@ -35,27 +39,47 @@ function U8sDefendingSession() {
   };
 
   return (
-    <div className="flex-container">
-      {sessionPlans.map((plan, index) => (
-        <div key={index} className="inner-flex-container">
-          <div className="flex-container-1">
-            <ImageDownload
-              imageUrl={plan.imageUrl}
-              imageName={plan.imageName}
-              imageSize="475px"
-            />
-          </div>
-          <div className="flex-container-2">
-            <div className = "review-box">
-            <ReviewsDisplay imageName={plan.imageName}/>
-            <ReviewComponent imageName={plan.imageName}/>
+    <div className="session-container">
+      <h1 className="title">U8s Defending</h1>
+      <button class="info-button">i
+        <span class="info-text">Each drill should be 15 minutes each</span>
+      </button>
+      {sessionPlans.map((plan, index) => {
+        if (plan.imageName === '5-a-side-match.png') {
+          return (
+            <div key={index} className="match-image-container">
+              <ImageDownload
+                imageUrl={plan.imageUrl}
+                imageName={plan.imageName}
+                imageSize="700px"
+              />
             </div>
-          </div>
-        </div>
-      ))}
-      <button onClick={downloadAllSessionPlans}>Download All Plans</button>
+          );
+        } else {
+          return (
+            <div key={index} className="inner-flex-container">
+              <div className="flex-container-1">
+                <ImageDownload
+                  imageUrl={plan.imageUrl}
+                  imageName={plan.imageName}
+                  imageSize="500px"
+                />
+              </div>
+              <div className="flex-container-2">
+                <div className="review-box">
+                  <ReviewsDisplay imageName={plan.imageName}/>
+                  <ReviewComponent imageName={plan.imageName}/>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
+      <button className="download-all-button" onClick={downloadAllSessionPlans}>
+        Download All Plans
+      </button>
     </div>
-  );  
+  );
 }
 
 export default U8sDefendingSession;

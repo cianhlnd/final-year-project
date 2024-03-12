@@ -27,7 +27,7 @@ function ReviewComponent({ imageName }) {
   };
 
   return (
-    <div className='flex-container'>
+    <div className='review-submission'>
       <div className = "flexbox-item-1">
         {[...Array(5)].map((star, index) => {
           const ratingValue = index + 1;
@@ -50,7 +50,7 @@ function ReviewComponent({ imageName }) {
           );
         })}
       </div>
-      <button onClick={submitRating}>Submit Review</button> 
+      <button className = "submit-button" onClick={submitRating}>Submit Review</button> 
     </div>
   );
 }

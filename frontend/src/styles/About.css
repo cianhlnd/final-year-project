@@ -3,8 +3,13 @@
 }
 .about-text {
   position: absolute;
-  top: 30%;
+  top: 20%;
   width: 70%;
   left: 50%;
   transform: translateX(-50%);
+  color: white;
+  background-color: orange;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
 }

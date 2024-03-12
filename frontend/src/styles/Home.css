@@ -49,7 +49,7 @@ body {
 }
 
 .input-group {
-  top: 180px;
+  top: 250px;
   position: absolute;
   width: 280px;
   transition: .5s;

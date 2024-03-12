@@ -20,7 +20,8 @@ function About () {
       <li>PDP 1,2 and 3 courses</li>
       <li>Garda Vetting</li>
       <li>Child Safeguarding 1</li>
-      <li> Coerver Youth Diploma 1 as well as various workshops</li>
+      <li>Coerver Youth Diploma 1</li>
+      <li>Various workshops including FAI 7vs7, Coerver ball mastery and 1vs1</li>
       </ul>
       <p>
       I have developed this web application to tailor torwards age groups I feel comfortable sharing my knowledge base on 

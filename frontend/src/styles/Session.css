@@ -8,7 +8,6 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  margin-top: 20px;
 }
 
 .flex-container-1 {
@@ -28,14 +27,6 @@
   justify-content: center;
 }
 
-.flexbox-item-2 {
-  background-color: red;
-}
-
-.flexbox-item-3 {
-  background-color: blue;
-}
-
 .inner-flex-container {
   display: flex;
   flex-direction: row;
@@ -46,6 +37,7 @@
 
 .review-list-container {
   text-align: center;
+  width:450px;
 }
 
 .review-wrapper {
@@ -62,11 +54,124 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  background-color: orange;
+  background-color: darkorange;
   margin: 10px;
   padding: 5px;
   width: 100px;
 }
 .review-box {
   height: auto;
+}
+.download-button {
+  width:100%;
+  margin-top: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,orangered, orange);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  position:relative;
+  margin-top: 10px;
+}
+.download-all-button {
+  width:60%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,orangered, orange);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+.submit-button {
+  width:200px;
+  margin-top: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,orangered, orange);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.submit-button:hover, .download-all-button:hover, .download-button:hover {
+  background: orange;
+}
+
+.review-submission {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.info-button {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  left: 90%;
+  margin-top: 30px;
+}
+
+.info-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: darkorange;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  right: 125%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  transform: translateY(-30%);
+}
+
+.info-button:hover .info-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.info-button:hover {
+  background-color: lightblue;
+}
+
+.match-image-container {
+  width: 60%;
+  margin: 20px auto;
 }
