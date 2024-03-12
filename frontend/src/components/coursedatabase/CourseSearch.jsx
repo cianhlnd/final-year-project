@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import '../../styles/CourseSearch.css';
 
-function CourseSearch ({ onSearch }) {
+function CourseSearch({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault(); // Prevents the default form submit action
     onSearch(searchTerm);
   };
 
   return (
-    <div className="search">
+    <form className="search" onSubmit={handleSearch}>
       <input
         type="text"
-        placeholder="Search by course title"
+        placeholder="Search by course title, date or location"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+      <button type="submit">Search</button>
+    </form>
   );
 };
 

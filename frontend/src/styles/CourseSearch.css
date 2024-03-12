@@ -5,3 +5,8 @@
     left: 50%; 
     text-align: center; 
 }
+
+.search input[type="text"] {
+    width: 100%;
+    border: 2px solid black;
+}

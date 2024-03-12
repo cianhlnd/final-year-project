@@ -241,8 +241,99 @@ const coursesData = [
       id: 35,
       title: 'PDP 2',
       location: 'Inishowen League HQ, Maginn Park, Buncrana, Co.Donegal',
-      date: '28/04/2024 - 28/04/2024',
-      link: 'https://faiconnect.ie/mycomet/private/seminars/12796635'
+      date: '25/05/2024 - 25/05/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14456124'
+    },
+    {
+      id: 36,
+      title: 'Goalkeeping D & C Licence / Coach Development Festival',
+      location: 'FAI HQ, Abbotstown',
+      date: '08/06/2024 - 09/06/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14342102'
+    },
+    {
+      id: 37,
+      title: 'Goalkeeping D & C Licence / Coach Development Festival',
+      location: 'Umbro Park, Milebush, Castlebar, Co. Mayo',
+      date: '08/06/2024 - 09/06/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14342732'
+    },
+    {
+      id: 38,
+      title: 'PDP 3',
+      location: 'Mountmellick United, R32 WK2030h',
+      date: '30/06/2024 - 30/06/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14017745'
+    },
+    {
+      id: 39,
+      title: 'Goalkeeping D & C Licence / Coach Development Festival',
+      location: 'Passage FC, Co. Cork',
+      date: '10/08/2024 - 11/08/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14342938'
+    },
+    {
+      id: 40,
+      title: 'PDP 3',
+      location: 'Gainstown, Mullingar AFC, Westmeath',
+      date: '18/08/2024 - 18/08/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/13214645'
+    },
+    {
+      id: 41,
+      title: '7v7',
+      location: 'LDSL Abbeycartron Longford N39 R588',
+      date: '25/08/2024 - 25/08/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14307636'
+    },
+    {
+      id: 42,
+      title: '9v9',
+      location: 'LDSL Abbeycartron Longford N39 R588',
+      date: '25/08/2024 - 25/08/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/14307697'
+    },
+    {
+      id: 43,
+      title: '7v7',
+      location: 'Gainstown, Mullingar AFC, Westmeath',
+      date: '01/09/2024 - 01/09/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/13214769'
+    },
+    {
+      id: 44,
+      title: '9v9',
+      location: 'Gainstown, Mullingar AFC, Westmeath',
+      date: '01/09/2024 - 01/09/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/13215154'
+    },
+    {
+      id: 45,
+      title: 'Garda Vetting applications Ulster 2024- Cavan, Donegal, Monaghan',
+      location: 'FAI HQ',
+      date: '31/12/2024 - 31/12/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/12438740'
+    },
+    {
+      id: 46,
+      title: 'Garda Vetting applications Munster 2024- Clare, Cork, Kerry, Limerick, Tipperary, Waterford',
+      location: 'FAI HQ',
+      date: '31/12/2024 - 31/12/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/12438784'
+    },
+    {
+      id: 47,
+      title: 'Garda Vetting applications Connacht 2024- Galway, Leitrim, Mayo, Roscommon, Sligo',
+      location: 'FAI HQ',
+      date: '31/12/2024 - 31/12/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/12438793'
+    },
+    {
+      id: 48,
+      title: 'Garda Vetting applications Leinster 2024',
+      location: 'FAI HQ',
+      date: '31/12/2024 - 31/12/2024',
+      link: 'https://faiconnect.ie/mycomet/private/seminars/12999653'
     }
   ];
   
