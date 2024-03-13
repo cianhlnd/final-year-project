@@ -1,11 +1,11 @@
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: normal;
-  height: 100%;
   background-image: linear-gradient(to right, forestgreen, lightgreen);
+  min-height: 85vh;
 }
 
 .form-box {
@@ -17,6 +17,7 @@ body {
   padding: 0;
   border-radius: 10px;
   overflow: hidden; 
+  border: solid 2px black;
 }
 .button-box {
   width: 220px;
@@ -25,6 +26,7 @@ body {
   box-shadow: 0 0 20px 9px forestgreen;
   border-radius: 30px;
   color: white;
+  border: solid 2px black;
 }
 .toggle-btn {
   padding: 10px 30px;
@@ -82,6 +84,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: white;
+  border: solid 2px black;
 }
 .submit-btn:hover {
   background: lightgreen
@@ -98,4 +101,25 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  border: solid 2px black;
+}
+.about-button {
+  width:20%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,orangered, orange);
+  border: 2px solid black;
+  outline: none;
+  border-radius: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  position:absolute;
+  border: 2px solid black; 
+  color: white;
+  top: 91%;
+}
+.about-button:hover {
+  background: orange;
 }
