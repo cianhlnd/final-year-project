@@ -63,7 +63,7 @@ function FiveASide() {
       </div>
       <div className="header-container">
         <h2>1-2-1 (Diamond)</h2>
-        <img className = "formation-img"src="frontend/public/images/5-a-side/1-2-1.png" alt="1-2-1" />
+        <img className = "formation-img"src={`${process.env.PUBLIC_URL}/images/5-a-side/1-2-1.png`} alt="1-2-1" />
       </div>
       <div className="list-container">
         <ul className="list-item">
