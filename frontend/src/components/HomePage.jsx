@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Home.css';
 import { backendUrl } from '../config.js';
 
@@ -49,6 +49,7 @@ function HomePage() {
   const togglePosition = isLoginView ? '0px' : '110px';
 
   return (
+    <div>
     <div className="form-box">
       <div className="button-box">
         <div id="btn" style={{ left: togglePosition }}></div>
@@ -71,6 +72,11 @@ function HomePage() {
       </form>
       )}
     </div>
+    <Link to="/aboutnonav" style={{ color: 'white', textDecoration: 'none' }}>
+    <button className = "about-button">
+      About
+    </button>
+  </Link></div>
   );
 }
 

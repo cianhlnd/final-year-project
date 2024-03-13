@@ -23,6 +23,7 @@ import SevenASide from './components/formations/7-a-side';
 import NineASide from './components/formations/9-a-side';
 import About from './components/About';
 import Files from './components/Files';
+import AboutNoNav from './components/AboutNoNav';
 
 // Navbar component
 const menuItems = [
@@ -115,6 +116,7 @@ function App() {
         {/* Homepage without navbar */}
         <Route index element={<HomePage />} />
         <Route path="/homepage" element={<HomePage />} />
+        <Route path="/aboutnonav" element={<AboutNoNav />} />
         <Route
           path="/profile"
           element={
