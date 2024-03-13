@@ -64,17 +64,15 @@ function Profile() {
           Logout
         </button>
       </Link>
-      
     </div>
     
     <div className="speech-bubble">
-    <div className="speech-text">
+      <div className="speech-text">
         IDEAL: Introduction, Demonstrate, Explain, Assessment, Link
+      </div>
+        <FaComment size={200} color="white"/>
+      </div>
     </div>
-    <FaComment size={200} color="white"/>
-</div>
-    </div>
-
   );
 }
 

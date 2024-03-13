@@ -42,7 +42,7 @@ function U8sDribblingSession() {
     <div className="session-container">
       <h1 className="title">U8s-U9s Dribbling</h1>
       <button className="info-button">i
-        <span className="info-text">Each drill should be 15 minutes with a match at the end</span>
+        <span className="info-text">Refresh the page to see your submitted review, you can only review each drill once</span>
       </button>
       {sessionPlans.map((plan, index) => {
         if (plan.imageName === '5-a-side-match.png') {
