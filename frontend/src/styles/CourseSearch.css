@@ -10,3 +10,14 @@
     width: 100%;
     border: 2px solid black;
 }
+
+.search-btn {
+    cursor: pointer;
+    background: linear-gradient(to right,orangered, orange);
+    border: 2px solid black;
+    outline: none;
+    color: white;
+}
+.search-btn:hover {
+    background: orange;
+}

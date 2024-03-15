@@ -17,7 +17,7 @@ function CourseSearch({ onSearch }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button className = "search-btn" type="submit">Search</button>
     </form>
   );
 };
