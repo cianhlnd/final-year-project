@@ -72,11 +72,12 @@ function HomePage() {
       </form>
       )}
     </div>
-    <Link to="/aboutnonav" style={{ color: 'white', textDecoration: 'none' }}>
-    <button className = "about-button">
-      About
-    </button>
-  </Link></div>
+      <Link to="/aboutnonav" style={{ color: 'white', textDecoration: 'none' }}>
+        <button className = "about-button">
+          About
+        </button>
+      </Link>
+    </div>
   );
 }
 
