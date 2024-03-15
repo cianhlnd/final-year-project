@@ -8,8 +8,27 @@
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  background-color: orange;
+  background-color: darkorange;
   padding: 5px;
   border-radius: 5px;
   border: 2px solid black;
+}
+.back-button {
+  width:10%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,orangered, orange);
+  border: 2px solid black;
+  outline: none;
+  border-radius: 30px;
+  left: 5%;
+  position:absolute;
+  border: 2px solid black; 
+  color: white;
+  top: 5%;
+}
+.back-button:hover {
+  background: orange;
 }
