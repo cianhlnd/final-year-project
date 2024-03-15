@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaComment } from 'react-icons/fa';
+import { FaLightbulb } from 'react-icons/fa';
 import '../styles/Profile.css'
 import { backendUrl } from '../config.js';
 
@@ -56,20 +57,27 @@ function Profile() {
   return (
     <div>
       <div className = "profile-container">
-      <h2>Profile Details</h2>
-      <p>Username: {userDetails.username}</p>
-      <p>Email: {userDetails.email}</p>
-      <Link to="/homepage" style={{ color: 'white', textDecoration: 'none' }}>
-        <button className = "logout-btn" onClick={handleLogout}>
-          Logout
-        </button>
-      </Link>
-    </div>
-    
-    <div className="speech-bubble">
-      <div className="speech-text">
-        IDEAL: Introduction, Demonstrate, Explain, Assessment, Link
+        <h2>Profile Details</h2>
+        <p>Username: {userDetails.username}</p>
+        <p>Email: {userDetails.email}</p>
+        <Link to="/homepage" style={{ color: 'white', textDecoration: 'none' }}>
+          <button className = "logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
+        </Link>
       </div>
+      <div className = "light-bulb">
+        <FaLightbulb size={100} color="yellow"/>
+      </div>
+      <div className="speech-bubble">
+        <div className="speech-text">
+          <div>
+            <strong>Tip of the Week:</strong>
+          </div>
+          <div>
+            IDEAL: Introduce, Demonstrate, Explain, Assess, Link
+          </div>
+        </div>
         <FaComment size={200} color="white"/>
       </div>
     </div>

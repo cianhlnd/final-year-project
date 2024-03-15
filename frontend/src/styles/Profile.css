@@ -39,6 +39,10 @@
 }
 .speech-text {
     text-align: center; 
-    top:35%;
+    top:30%;
     position: absolute;
+}
+.light-bulb {
+    position: absolute;
+    right: 20%;
 }
