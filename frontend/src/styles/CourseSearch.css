@@ -21,3 +21,41 @@
 .search-btn:hover {
     background: orange;
 }
+.course-info-button {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    left: 90%;
+    margin-top: 30px;
+}
+  
+.course-info-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: darkorange;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 125%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    transform: translateY(-30%);
+}
+
+.course-info-button:hover .course-info-text {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.course-info-button:hover {
+    background-color: lightblue;
+}
