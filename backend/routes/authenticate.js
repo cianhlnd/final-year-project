@@ -3,22 +3,27 @@ const UserModel = require('../models/user');
 require("dotenv").config();
 
 const authenticate = async (req, res, next) => {
-    if (!req.cookies || !req.cookies.appjwt) {
-        return res.status(401).json({error: "No authentication token"});
+    if(req.cookies == null || req.cookies.appjwt == null){
+        res.status(401).json({error: "No authentication token"})
+        return;
     }
-    try {
-        const tokenDecoded = jwt.verify(req.cookies.appjwt, process.env.Secret_Key);
-        if (!tokenDecoded || !tokenDecoded.username) {
-            return res.status(401).json({error: "Malformed or invalid token"});
+    const token = req.cookies.appjwt;
+    try{
+        const tokenDecoded = jwt.verify(token,process.env.Secret_Key)
+        if(tokenDecoded == null || tokenDecoded.username == null){
+            res.status(401).json({error: "Malformed or invalid token"})
+            return;
         }
-        const user = await UserModel.findOne({username: tokenDecoded.username});
-        if (!user) {
-            return res.status(401).json({error: "User does not exist"});
+        var user = await UserModel.findOne({username: tokenDecoded.username});
+        if(!user){
+            res.status(401).json({error: "User does not exist"})
+            return;
         }
         req.user = user;
         next();
-    } catch(err) {
-        res.status(401).json({error: "Malformed or invalid token"});
+    }catch(err){
+        res.status(401).json({error: "Malformed or invalid token"})
+        return;
     }
 };
 

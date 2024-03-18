@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require('path');
 const {passwordCheck,generateHash} =  require('../encryptUtility.js');
 var jwt = require('jsonwebtoken');
 var UserModel = require('../models/user.js')
