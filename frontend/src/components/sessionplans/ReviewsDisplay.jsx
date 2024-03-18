@@ -22,18 +22,17 @@ function ReviewsDisplay({ imageName }) {
 
   return (
     <div className="review-list-container">
-  <div className="flexbox-item-1"> 
-    <h3>Average Rating: {averageRating.toFixed(1)}</h3>
-  </div>
-  <div className="review-wrapper"> 
-    {reviews.map((review, index) => (
-      <div key={index} className="review-container">
-        <p>{review.username}: {review.rating}</p>
+      <div className="flexbox-item-1"> 
+        <h3>Average Rating: {averageRating.toFixed(1)}</h3>
       </div>
-    ))}
-  </div>
-</div>
-
+      <div className="review-wrapper"> 
+      {reviews.map((review, index) => (
+        <div key={index} className="review-container">
+          <p>{review.username}: {review.rating}</p>
+        </div>
+      ))}
+      </div>
+    </div>
   );
 }
 

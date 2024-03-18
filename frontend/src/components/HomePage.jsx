@@ -47,7 +47,7 @@ function HomePage() {
   };
 
   const togglePosition = isLoginView ? '0px' : '110px';
-
+  
   return (
     <div>
     <div className="form-box">

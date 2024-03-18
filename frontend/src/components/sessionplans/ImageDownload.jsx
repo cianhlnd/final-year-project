@@ -26,7 +26,6 @@ function ImageDownload({ imageUrl, imageName, imageSize }) {
           Download {imageName}
         </button>
       </div>
-        
     </div>
   );
 }
