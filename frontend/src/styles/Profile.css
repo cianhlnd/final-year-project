@@ -9,14 +9,14 @@
     color: white;
     border-radius: 10px;
     text-align: center;
+    transform: translateY(25%);
 }
 .speech-bubble {
     position: absolute;
     width: 200px; 
     height: 200px; 
     right: 20px;
-    top: 60%;
-    transform: translateY(-50%); 
+    transform: translateY(-130%); 
 }
 .logout-btn {
     width:85%;
@@ -45,4 +45,5 @@
 .light-bulb {
     position: absolute;
     right: 20%;
+    transform: translateY(-100%);
 }
