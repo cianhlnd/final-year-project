@@ -2,6 +2,10 @@
   margin: 20px;
   padding: 20px;
 }
+.files-header{
+  position:relative;
+  left: 43%;
+}
 .files-container h1 {
   width: 100%; 
   text-align: center;
