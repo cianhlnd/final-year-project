@@ -5,6 +5,7 @@ nav {
   display: flex;
   z-index: 1000;
   border: 1px solid black;
+  min-width: 700px;
 }
 
 nav ul {
@@ -58,10 +59,4 @@ nav li ul ul {
 nav li:hover > ul,
 nav li ul li:hover > ul {
   display: block;
-}
-
-@media (max-width: 600px) {
-  nav {
-    margin-top: 0;
-  }
 }

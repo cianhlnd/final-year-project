@@ -1,5 +1,5 @@
 .search {
-    position: absolute;
+    position: relative;
     transform: translateX(-50%);
     top: 10%;
     left: 50%; 
@@ -7,7 +7,7 @@
 }
 
 .search input[type="text"] {
-    width: 100%;
+    min-width: 230px;
     border: 2px solid black;
 }
 

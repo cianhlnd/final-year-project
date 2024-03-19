@@ -47,3 +47,15 @@
     right: 20%;
     transform: translateY(-100%);
 }
+@media (max-width: 1000px) {
+   .speech-bubble{
+    position: relative;
+    left: 55%;
+    transform: translateY(10%);
+   }
+   .light-bulb {
+    position: absolute;
+    right: 50%;
+    transform: translateY(135%);
+}
+}
