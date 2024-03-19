@@ -9,8 +9,12 @@ const files = [
 
 function Files() {
   return (
-    <div className="files-container">
+    <div>
+    <div>
       <h1 className = "files-header">Useful Files</h1>
+    </div>
+    <div className="files-container">
+      
       <ul>
         {files.map((file, index) => (
           <li key={index}>
@@ -18,6 +22,7 @@ function Files() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
