@@ -1,3 +1,4 @@
+/*Styling for the profile page container*/
 .profile-container {
     width:350px;
     height: 250px;
@@ -11,6 +12,7 @@
     text-align: center;
     transform: translateY(25%);
 }
+/*Positioning for the speech bubble icon*/
 .speech-bubble {
     position: absolute;
     width: 200px; 
@@ -18,6 +20,7 @@
     right: 20px;
     transform: translateY(-130%); 
 }
+/*Styling for logout button*/
 .logout-btn {
     width:85%;
     padding: 10px 30px;
@@ -25,6 +28,7 @@
     display: block;
     margin: auto;
     background: linear-gradient(to right,forestgreen, lightgreen);
+    color: white;
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -33,20 +37,27 @@
     position:absolute;
     margin-top:20px;
     border: 2px solid black;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+/*Logout button hover*/
 .logout-btn:hover {
     background: lightgreen;
 }
+/*Positioning for speech bubble text*/
 .speech-text {
     text-align: center; 
     top:30%;
     position: absolute;
 }
+/*Positioning for the light bulb*/
 .light-bulb {
     position: absolute;
     right: 20%;
     transform: translateY(-100%);
 }
+/*Used to make page more responsive, stops speech bubble and light bulb moving too far within the page*/
 @media (max-width: 1000px) {
    .speech-bubble{
     position: relative;

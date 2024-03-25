@@ -1,3 +1,4 @@
+/*Body tag for giving consistent styling throughout the pages*/
 body {
   padding: 0;
   margin: 0;
@@ -7,7 +8,7 @@ body {
   background-image: linear-gradient(to right, forestgreen, lightgreen);
   min-height: 85vh;
 }
-
+/*Styling for the form box, acts as a container*/
 .form-box {
   width:380px;
   height: 450px;
@@ -19,6 +20,7 @@ body {
   overflow: hidden; 
   border: solid 2px black;
 }
+/*Box for the button*/
 .button-box {
   width: 220px;
   margin: 35px auto;
@@ -28,6 +30,7 @@ body {
   color: white;
   border: solid 2px black;
 }
+/*Styling for the toggle button*/
 .toggle-btn {
   padding: 10px 30px;
   cursor: pointer;
@@ -39,6 +42,7 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+/*Element for styling the buttons indivdually*/
 #btn {
   top: 0;
   left: 0;
@@ -49,13 +53,14 @@ body {
   border-radius: 30px;
   transition: .5s;
 }
-
+/*Gives structure to input boxes*/
 .input-group {
   top: 250px;
   position: absolute;
   width: 280px;
   transition: .5s;
 }
+/*Styles input boxes*/
 .input-field {
   width: 100%;
   padding: 10px 0;
@@ -70,6 +75,7 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+/*Styling for the submit button*/
 .submit-btn {
   width:85%;
   padding: 10px 30px;
@@ -86,15 +92,19 @@ body {
   color: white;
   border: solid 2px black;
 }
+/*Hover functionality for submit button*/
 .submit-btn:hover {
   background: lightgreen
 }
+/*Individual styling for login button*/
 #login{
   left:50px;
 }
+/*Individual styling for registration button*/
 #register{
   left:450px;
 }
+/*Styling for the image logo*/
 .img-logo {
   height: 125px;
   width: 125px;
@@ -103,6 +113,7 @@ body {
   transform: translateX(-50%);
   border: solid 2px black;
 }
+/*About button styling*/
 .about-button {
   width:20%;
   padding: 10px 30px;
@@ -119,6 +130,7 @@ body {
   color: white;
   top: 91%;
 }
+/*Hover for about button*/
 .about-button:hover {
   background: orange;
 }

@@ -3,12 +3,13 @@ import '../../styles/CourseSearch.css';
 
 function CourseSearch({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState('');
-
+  //Event handler for form submission event
   const handleSearch = (e) => {
-    e.preventDefault(); // Prevents the default form submit action
+    e.preventDefault(); //Prevents the default form submit action
     onSearch(searchTerm);
   };
 
+   //Renders a form with a text input and a submit button
   return (
     <form className="search" onSubmit={handleSearch}>
       <input

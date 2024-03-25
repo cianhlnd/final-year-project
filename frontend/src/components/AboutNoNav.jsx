@@ -3,6 +3,7 @@ import '../styles/About.css'
 import { Link } from 'react-router-dom';
 
 function AboutNoNav () {
+  //Renders About page UI with no nav bar
   return (
     <div>
       <h1 className = "about-header">About Us</h1>

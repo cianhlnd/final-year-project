@@ -6,19 +6,22 @@ import '../styles/Profile.css'
 import { backendUrl } from '../config.js';
 
 function Profile() {
+  //State that stores user details, initially empty
   const [userDetails, setUserDetails] = useState({ username: '', email: '' });
 
+  //useEffect hook that fetches profile details from the backend once the component mounts
   useEffect(() => {
-    const fetchProfile = async () => {
+    //Async function that fetches user profile
+    const fetchProfile = async () => { 
       try {
         const response = await fetch(`${backendUrl}/api/v1/user/profile`, {
           method: 'GET',
-          credentials: 'include',
+          credentials: 'include', //Includes credentials for cookie-based authentication
         });
 
         if (response.ok) {
-          const data = await response.json();
-          setUserDetails(data);
+          const data = await response.json(); //Parses JSON data from response
+          setUserDetails(data); //Updates state with user details
         } else {
           console.error('Failed to fetch profile details');
         }
@@ -28,9 +31,9 @@ function Profile() {
     };
 
     fetchProfile();
-  }, []);
+  }, []); //Empties dependency array means this effect runs once on component mount
 
-
+  //Function that handles logout action
   const handleLogout = async () => {
     try {
       const response = await fetch(`${backendUrl}/api/v1/user/logout`, {
@@ -39,6 +42,7 @@ function Profile() {
       });
 
       if (response.ok) {
+        //Checks if the cookie was cleared
         const isCookieCleared = !response.headers.has('set-cookie');
         
         if (isCookieCleared) {
@@ -54,6 +58,7 @@ function Profile() {
     }
   };
 
+  //Renders Profile page's UI
   return (
     <div>
       <div className = "profile-container">

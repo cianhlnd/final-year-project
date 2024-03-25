@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const UserModel = require('../models/user');
 require("dotenv").config();
-
+//Same as middleware in authApiRoutes, made into a const instead to help with reviewRoutes
 const authenticate = async (req, res, next) => {
     if(req.cookies == null || req.cookies.appjwt == null){
         res.status(401).json({error: "No authentication token"})

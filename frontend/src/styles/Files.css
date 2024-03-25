@@ -1,40 +1,42 @@
+/*Container for files buttons*/
 .files-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
   margin: 20px;
   padding: 20px;
+  overflow-x: hidden;
 }
+/*Title for files page*/
 .files-header{
   position:relative;
-  left: 43%;
-}
-.files-container h1 {
-  width: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
   text-align: center;
 }
-  
+/*Removed bullet points for unordered lists*/
 .files-container ul {
   list-style: none;
 }
-  
+/*Styling for the file buttons which are in a list*/
 .files-container li {
   margin: 10px 0;
   padding: 5px;
   background-color:  darkorange;
   border-radius: 5px;
   text-align: center;
-  width: 40%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 80%;
   border: 2px solid black;
 }
-  
+/*Removed link styling*/
 .files-container li a {
   text-decoration: none;
   color: white;
   display: block;
   padding: 5px;
 }
-  
+/*Hover functionality*/
 .files-container li a:hover {
   background-color: orange;
 }  

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+//Schema for reviews
 const ReviewSchema = new Schema({
     username: { type: String, required: true },
     imageName: { type: String, required: true },

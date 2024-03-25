@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/About.css'
 
 function About () {
+  //Renders About page UI
   return (
     <div>
       <h1 className = "about-header">About Us</h1>

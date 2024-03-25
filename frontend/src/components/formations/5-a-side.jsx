@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/Formation.css';
 
 function FiveASide() {
+  //Renders formation page's structure
   return (
     <div className="container">
       <div className="header-container">

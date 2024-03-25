@@ -1,20 +1,20 @@
-
-.flex-container {
+/*Styles main session page container*/
+.session-container {
   display: flex;
   flex-direction: column;
 }
-
+/*Sub containers to split page content*/
 .flex-container-1, .flex-container-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
 }
-
+/*Pushes session plans to left hand side of page*/
 .flex-container-1 {
   justify-content: flex-start;
 }
-
+/*Pushes review functionality to right side of page*/
 .flex-container-2 {
   justify-content: flex-end;
 }
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
 }
-
+/*Ensures elements are structured in rows*/
 .inner-flex-container {
   display: flex;
   flex-direction: row;
@@ -35,18 +35,18 @@
   align-items: flex-start;
   margin-top: 20px;
 }
-
+/*Positioning for review containers*/
 .review-list-container {
   text-align: center;
   width:450px;
 }
-
+/*Ensures reviews are repsonsive*/
 .review-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/*Styling for the review containers*/
 .review-container {
   border: 2px solid black;
   box-sizing: border-box;
@@ -60,9 +60,11 @@
   padding: 5px;
   width: 100px;
 }
+/*Adjusts height of review container to match amount of user reviews*/
 .review-box {
   height: auto;
 }
+/*Styling for download button*/
 .download-button {
   width:100%;
   margin-top: 5px;
@@ -80,7 +82,9 @@
   color: white;
   position:relative;
   margin-top: 10px;
+  border: 2px solid black;
 }
+/*Styling for download all button*/
 .download-all-button {
   width:60%;
   padding: 10px 30px;
@@ -98,7 +102,9 @@
   margin-bottom: 20px;
   position: relative;
   margin-top: 20px;
+  border: 2px solid black;
 }
+/*Styling for submit button*/
 .submit-button {
   width:200px;
   margin-top: 5px;
@@ -114,29 +120,31 @@
   font-weight: 400;
   font-style: normal;
   color: white;
+  border: 2px solid black;
 }
-
+/*Hover functionality for buttons*/
 .submit-button:hover, .download-all-button:hover, .download-button:hover {
   background: orange;
 }
-
+/*Positioning for review submission elements*/
 .review-submission {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+/*Session plan header*/
 .title {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 10px;
 }
-
+/*Styling for info button*/
 .info-button {
   position: relative;
   padding: 10px 20px;
-  border: 1px solid #007bff;
+  border: 2px solid black;
   background-color: #007bff;
   color: white;
   border-radius: 5px;
@@ -144,8 +152,9 @@
   font-size: 16px;
   left: 90%;
   margin-top: 30px;
+  width: 14px;
 }
-
+/*Text that appears when info button if hovered over*/
 .info-text {
   visibility: hidden;
   width: 220px;
@@ -160,23 +169,23 @@
   opacity: 0;
   transition: opacity 0.3s;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  transform: translateY(-30%);
+  transform: translateY(-50%);
 }
-
+/*Allows text to appear when the info button is hovered over*/
 .info-button:hover .info-text {
   visibility: visible;
   opacity: 1;
 }
-
+/*Colour for hover*/
 .info-button:hover {
   background-color: lightblue;
 }
-
+/*Gives size to match drill*/
 .match-image-container {
   width: 60%;
   margin: 20px auto;
 }
-
+/*Border for session plans*/
 .session-image {
   border: 2px solid black;
   border-radius: 5px;

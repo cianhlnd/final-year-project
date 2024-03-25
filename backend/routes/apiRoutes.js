@@ -4,10 +4,11 @@ var jwt = require('jsonwebtoken');
 var UserModel = require('../models/user.js')
 require("dotenv").config();
 var router  = express.Router();
-
+//Middleware
 router.use(function(req, res, next) {
     next();
 });
+//Registration route
 router.route("/register") 
     .post(function(req,res){ 
         var newUser = new UserModel(req.body);
@@ -16,7 +17,9 @@ router.route("/register")
     .then(() => {
         response.status = "ok";
         response.message = "User " + newUser.username + " has been created";
+        //Token creation
         var token = jwt.sign({ email: newUser.email, username: newUser.username }, process.env.Secret_Key);
+        //Token sent back as a http-only cookie
         res.cookie('appjwt', token, { httpOnly: true })
         response.email = newUser.email;
         res.status(201).send(response);
@@ -28,9 +31,11 @@ router.route("/register")
         res.status(200).send(response);
     });
     })
+//Login Route
 router.route("/login") 
     .post(async function(req,res){ 
         const{email, password} = req.body
+        //Avoid case sensitivity
         upperEmail = email.toUpperCase()
         var response = {};
         if(!(upperEmail && password)){
@@ -40,6 +45,7 @@ router.route("/login")
             return;
         }
         const user = await UserModel.findOne({ email : upperEmail });
+        //Checks for correct password
         if(!user || !passwordCheck(password,user.password)){
             response.status = "error";
             response.message = "Incorrect password or email";

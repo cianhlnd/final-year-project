@@ -1,3 +1,4 @@
+/*Styling for main navbar*/
 nav {
   background-color: darkorange;
   height: 41px;
@@ -7,7 +8,7 @@ nav {
   border: 1px solid black;
   min-width: 700px;
 }
-
+/*Styling for navigation list*/
 nav ul {
   list-style: none;
   padding: 0;
@@ -15,7 +16,7 @@ nav ul {
   background-color: darkorange;
   position: absolute;
 }
-
+/*Styling for nav list*/
 nav li {
   position: relative;
   color: white;
@@ -27,18 +28,18 @@ nav li {
   padding: 10px;
   border-right: 1px solid black;
 }
-
+/*Styling for nav links, removes link text-decoration*/
 nav li a {
   text-decoration: none;
   color: inherit;
   display: block;
   border-right: none;
 }
-
+/*Hover functionality for nav link*/
 nav li:hover {
   background-color: orange;
 }
-
+/*Styling for initial submenus*/
 nav li > ul {
   display: none;
   position: absolute;
@@ -49,13 +50,13 @@ nav li > ul {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-
+/*Styling for nested submenus*/
 nav li ul ul {
   display: none;
   top: 0;
   left: 100%;
 }
-
+/*Structures hover for submenus*/
 nav li:hover > ul,
 nav li ul li:hover > ul {
   display: block;

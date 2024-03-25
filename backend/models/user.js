@@ -17,7 +17,7 @@ const UserSchema = new Schema({
         index: {unique: true, dropDups: true}
     },
     password: {type: String, required: true},
-});
+}, { timestamps: true });
 
 //Ensures password is hashed before saving, make sure not to use save for updating
 UserSchema.pre('save',function(next){

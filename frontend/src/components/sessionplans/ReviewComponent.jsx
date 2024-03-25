@@ -26,9 +26,11 @@ function ReviewComponent({ imageName }) {
     }
   };
 
+  //Render the ReviewComponent with a flexbox structure
   return (
     <div className='review-submission'>
       <div className = "flexbox-item-1">
+        {/*Generate star icons for the rating, using an array to create 5 stars*/}
         {[...Array(5)].map((star, index) => {
           const ratingValue = index + 1;
 
@@ -38,12 +40,16 @@ function ReviewComponent({ imageName }) {
                 type="radio"
                 name="rating"
                 value={ratingValue}
+                //Update the rating when a star is clicked
                 onClick={() => setRating(ratingValue)} 
+                //Hide the radio input visually
                 style={{ display: 'none' }}
               />
               <FaStar
+              //Change color based on hover or selected rating
                 color={ratingValue <= (hover || rating) ? "yellow" : "grey"}
                 size={20}
+                //Update hover state on mouse enter
                 onMouseEnter={() => setHover(ratingValue)}
               />
             </label>
@@ -55,6 +61,7 @@ function ReviewComponent({ imageName }) {
   );
 }
 
+//Prop type validation for imageName
 ReviewComponent.propTypes = {
   imageName: PropTypes.string.isRequired,
 };

@@ -1,6 +1,8 @@
+/*About page's title*/
 .about-header {
   text-align: center;
 }
+/*Styles about page text*/
 .about-text {
   position: absolute;
   top: 20%;
@@ -13,6 +15,7 @@
   border-radius: 5px;
   border: 2px solid black;
 }
+/*Simple back button*/
 .back-button {
   width:10%;
   padding: 10px 30px;
@@ -29,6 +32,7 @@
   color: white;
   top: 5%;
 }
+/*Back button hover function*/
 .back-button:hover {
   background: orange;
 }

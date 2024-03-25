@@ -1,3 +1,4 @@
+//Stores data for courses page
 const coursesData = [
     {
       id: 1,
@@ -335,7 +336,6 @@ const coursesData = [
       date: '31/12/2024 - 31/12/2024',
       link: 'https://faiconnect.ie/mycomet/private/seminars/12999653'
     }
-  ];
+];
   
-  export default coursesData;
-  
+export default coursesData;

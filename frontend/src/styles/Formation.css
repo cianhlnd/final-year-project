@@ -1,3 +1,4 @@
+/*Container to layout flexbox strcutre and center items*/
 .container {
     display: flex;
     flex-direction: column;
@@ -5,16 +6,16 @@
     text-align: center;
     margin: 20px; 
 }
-  
+/*To style headers*/
 .header-container {
   text-align: center;
   margin-bottom: 20px; 
 }
-  
+/*To layout lists*/
 .list-container {
   text-align: center;
 }
-  
+/*Style individual lists*/
 .list-item {
   margin-bottom: 10px; 
   text-align: left;
@@ -24,16 +25,18 @@
   border-radius: 5px;
   border: 2px solid black;
 }
-  
+/*Style formation images*/
 .formation-img {
   max-width: 40%;
   height: auto; 
   border: 2px solid black;
   border-radius: 5px;
 }
+/*Remove bullet points for list titles e.g pros*/
 .li-style {
-    list-style: none;
+  list-style: none;
 }
+/*Add bullet points to formation content*/
 ul>li>ul>li {
   list-style:disc;
 }
