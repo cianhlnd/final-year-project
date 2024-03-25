@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import './styles/Navbar.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import reportWebVitals from './reportWebVitals';
 import Profile from './components/Profile';
@@ -25,98 +25,16 @@ import About from './components/About';
 import Files from './components/Files';
 import AboutNoNav from './components/AboutNoNav';
 
-// Navbar component
-const menuItems = [
-  { name: "Profile", link: "/profile" },
-  { name: "Courses", link: "/courses" },
-  {
-    name: "Coaches Corner",
-    submenu: [
-      {name: "Files", link: "/coaches-corner/files"},
-      {
-        name: "Formations",
-        submenu: [
-          { name: "5-a-side", link: "/coaches-corner/formations/5-a-side" },
-          { name: "7-a-side", link: "/coaches-corner/formations/7-a-side" },
-          { name: "9-a-side", link: "/coaches-corner/formations/9-a-side" },
-        ],
-      },
-      {
-        name: "Session Plans",
-        submenu: [
-          {
-            name: "u8s-u9s",
-            submenu: [
-              { name: "Defending", link: "/coaches-corner/session-plans/u8s/defending" },
-              { name: "Dribbling", link: "/coaches-corner/session-plans/u8s/dribbling" },
-              { name: "Passing", link: "/coaches-corner/session-plans/u8s/passing" },
-              { name: "Shooting", link: "/coaches-corner/session-plans/u8s/shooting" },
-            ]
-          },
-          {
-            name: "u10s-u11s",
-            submenu: [
-              { name: "Defending", link: "/coaches-corner/session-plans/u10s/defending" },
-              { name: "Dribbling", link: "/coaches-corner/session-plans/u10s/dribbling" },
-              { name: "Passing", link: "/coaches-corner/session-plans/u10s/passing" },
-              { name: "Shooting", link: "/coaches-corner/session-plans/u10s/shooting" },
-            ]
-          },
-          {
-            name: "u12s",
-            submenu: [
-              { name: "Defending", link: "/coaches-corner/session-plans/u12s/defending" },
-              { name: "Dribbling", link: "/coaches-corner/session-plans/u12s/dribbling" },
-              { name: "Passing", link: "/coaches-corner/session-plans/u12s/passing" },
-              { name: "Shooting", link: "/coaches-corner/session-plans/u12s/shooting" },
-            ]
-          }
-        ]
-      }
-    ],
-  },
-  { name: "About", link: "/about" },
-];
-
-function Navbar() {
-  const renderMenuItems = (items) => {
-    if (!Array.isArray(items)) {
-      console.error('Expected an array, but received:', items);
-      return null;
-    }
-
-    return items.map((item) => (
-      <li key={item.name}>
-        {item.link ? <Link to={item.link}>{item.name}</Link> : item.name}
-        {item.submenu && Array.isArray(item.submenu) && (
-          <ul>
-            {renderMenuItems(item.submenu)}
-          </ul>
-        )}
-      </li>
-    ));
-  };
-
-  return (
-    <nav>
-      <ul>
-        {renderMenuItems(menuItems)}
-      </ul>
-    </nav>
-  );
-}
-
-export default Navbar;
-
-// App component
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter  basename={process.env.PUBLIC_URL}>
       <Routes>
-        {/* Homepage without navbar */}
+        {/*Homepage and about page with no navbar*/}
         <Route index element={<HomePage />} />
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/aboutnonav" element={<AboutNoNav />} />
+        {/*All routes from here contain navbar*/}
+        {/*Route for profile page*/}
         <Route
           path="/profile"
           element={
@@ -126,6 +44,7 @@ function App() {
             </div>
           }
         />
+        {/*Route for courses page*/}
         <Route
           path="/courses"
           element={
@@ -135,11 +54,13 @@ function App() {
             </div>
           }
         />
+        {/*Route for coaches corner elements*/}
         <Route
           path="/coaches-corner/*"
           element={
             <div>
               <Navbar />
+              {/*Routes for coaches corner subemenus*/}
               <Routes>
                 <Route path="files" element={<Files />} />
                 <Route path="formations/5-a-side" element={<FiveASide />} />
@@ -161,6 +82,7 @@ function App() {
             </div>
           }
         />
+        {/*Route for about page*/}
         <Route
           path="/about"
           element={
